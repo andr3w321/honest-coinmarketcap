@@ -1,0 +1,101 @@
+rank,name,market_cap,price,true_volume,listed_volume,percent_fake_volume,n_exchanges_fiat_pairs,exchanges
+1,Bitcoin,144542864279.0,8488.31,1508351500.0,8281980000.0,81.79%,43,Upbit/Bitstamp/bitFlyer/GDAX/Bithumb/BTCBOX/BTCC/Kraken/itBit/Kraken/Simex/Gemini/TOPBTC/Coinsuper/OEX/GDAX/Bitstamp/Bitbank/Korbit/CoinsBank/Coinone/Livecoin/CoinsBank/Exmo/LakeBTC/WEX/CEX.IO/CoinsBank/Bitinka/Fatbtc/Coinfloor/Bitinka/GOPAX/Exrates/xBTCe/Omicrex/Coinroom/Coinroom/GDAX/Octaex/Coinroom/Exmo/BL3P
+2,Ethereum,68151464949.0,685.77,600609234.0,3220000000.0,81.35%,34,GDAX/Bithumb/Upbit/Kraken/Kraken/TOPBTC/Bitstamp/Gemini/Bitstamp/Coinone/GDAX/Korbit/OEX/Simex/Fatbtc/Coinsuper/WEX/GOPAX/Exmo/CEX.IO/Exrates/WEX/xBTCe/Omicrex/BTC-Alpha/Quoine/xBTCe/Omicrex/Quoine/Coinnest/Exmo/DSX/Livecoin/DSX
+3,Ripple,27116675534.0,0.691929,531665538.0,937770000.0,43.31%,38,Bithumb/Bitbank/Upbit/Coinone/Korbit/Bitstamp/Kraken/Kraken/Bitstamp/Exmo/GOPAX/CEX.IO/Gatehub/Exrates/RippleFox/Quoine/Ripple China/Bitstamp (Ripple Gateway)/CEX.IO/Gatehub/LiteBit.eu/Fatbtc/Mr. Exchange/The Rock Trading/Coinrail/Kraken/Bitsane/Mr. Exchange/Cryptomate/BitFlip/BitBay/Bitsane/Sistemkoin/BitBay/Quoine/Quoine/Bitlish/BitFlip
+4,Bitcoin Cash,24043528409.0,1404.18,452347914.0,1520830000.0,70.26%,46,Upbit/Bithumb/GDAX/Bitbank/Coinone/Korbit/Bitstamp/Kraken/Kraken/GDAX/WEX/Coinsuper/Bitstamp/TOPBTC/Exmo/CEX.IO/GOPAX/WEX/xBTCe/Omicrex/Livecoin/Quoine/Fatbtc/Coinroom/Coinroom/YoBit/CEX.IO/DSX/LiteBit.eu/Coinroom/DSX/Coinfloor/BitBay/Quoine/Coinnest/Exrates/Bittylicious/Coinrail/The Rock Trading/Cryptomate/SouthXchange/DSX/BitBay/Waves Decentralized Exchange/Abucoins/Abucoins
+5,EOS,12797395203.0,15.0461,946423501.0,2911840000.0,67.50%,14,Bithumb/Upbit/Coinone/Kraken/Kraken/GOPAX/TOPBTC/Exrates/Fatbtc/YoBit/Livecoin/Coinrail/OEX/BitFlip
+6,Litecoin,7809694553.0,138.246,111967294.0,504926000.0,77.83%,65,GDAX/Bitstamp/CoinsBank/GDAX/Kraken/Bithumb/WEX/TOPBTC/Kraken/CoinsBank/Upbit/CoinsBank/WEX/Coinsuper/Bitstamp/Coinone/xBTCe/Omicrex/Fatbtc/BTC-Alpha/xBTCe/Omicrex/Exrates/Korbit/Exmo/Livecoin/Coinroom/The Rock Trading/Coinroom/Coinroom/GOPAX/YoBit/DSX/Exmo/DSX/xBTCe/Omicrex/BL3P/OkCoin Intl./LiteBit.eu/Bittylicious/Coinhub/OKCoin.cn/Bitlish/Gatecoin/Coinnest/Cryptomate/Gatecoin/C-CEX/DSX/BitKonan/SouthXchange/Coinut/COSS/CRXzone/BitFlip/Coinrail/Bitlish/Bitsane/BitFlip/Bittylicious/Bittylicious/Ore.Bz/Lykke Exchange/Waves Decentralized Exchange
+7,Cardano,6915008983.0,0.26671,182239031.0,334268000.0,45.48%,2,Upbit/Coinnest
+8,Stellar,5992337434.0,0.32258,25494437.0,78206100.0,67.40%,12,Upbit/GOPAX/Kraken/Kraken/CEX.IO/Exrates/Stellar Decentralized Exchange/RippleFox/CEX.IO/Stellar Decentralized Exchange/CryptoMarket/Cryptomate
+9,IOTA,5142992678.0,1.85031,19664868.0,137155000.0,85.66%,3,Coinone/Exrates/CoinFalcon
+10,TRON,4419187001.0,0.0672139,454341519.0,784849000.0,42.11%,10,Upbit/Bithumb/Ethfinex/Coinnest/YoBit/Livecoin/LiteBit.eu/Coinrail/BitFlip/BitFlip
+11,NEO,4151199000.0,63.8646,14007064.0,170325000.0,91.78%,6,Upbit/Quoine/Quoine/Coinnest/Livecoin/Quoine
+12,Monero,3228550693.0,201.511,8067423.0,49565000.0,83.72%,16,Upbit/Bithumb/Kraken/Kraken/Exmo/Exrates/Coinroom/Coinroom/Livecoin/Exmo/Coinroom/LiteBit.eu/Cryptomate/SouthXchange/Bitlish/B2BX
+13,Dash,3188550884.0,395.322,14162265.0,106871000.0,86.75%,30,Upbit/WEX/Bithumb/Kraken/WEX/Exmo/Kraken/xBTCe/Omicrex/Coinroom/Coinroom/Coinroom/CEX.IO/Livecoin/LiteBit.eu/YoBit/Coinhub/Exrates/BitBay/CEX.IO/BitBay/SouthXchange/Bittylicious/BitFlip/C-CEX/Bittylicious/Quoine/Cryptomate/BitFlip/Coinrail
+14,NEM,2901366000.0,0.322374,16034459.0,30325200.0,47.12%,7,Zaif/Upbit/Exrates/Livecoin/YoBit/LiteBit.eu/Cryptomate
+15,VeChain,2373198507.0,4.51162,9738877.0,103638000.0,90.60%,4,Bithumb/Ethfinex/Livecoin/Coinnest
+16,Tether,2107435813.0,1.00014,1667620.0,4589240000.0,99.96%,1,Kraken
+17,Ethereum Classic,1814565697.0,17.8528,38732925.0,341514000.0,88.66%,17,Bithumb/Upbit/Kraken/Korbit/Kraken/Coinone/Exmo/Exrates/Coinsuper/YoBit/Coinroom/Coinnest/Coinroom/Coinroom/LiteBit.eu/Cryptomate/C-CEX
+18,Bytecoin,1796256353.0,0.00976836,0,67834800.0,100.00%,0,
+19,ICON,1582688095.0,4.08719,152656500.0,252599000.0,39.57%,2,Upbit/Bithumb
+20,Binance Coin,1478066353.0,12.9608,0,54439700.0,100.00%,0,
+21,Qtum,1442484592.0,16.283,45065043.0,198753000.0,77.33%,11,Upbit/Bithumb/Coinone/GOPAX/Coinnest/LiteBit.eu/Coinrail/Livecoin/Quoine/Quoine/Quoine
+22,OmiseGO,1388615453.0,13.6082,11768766.0,55036400.0,78.62%,8,Ethfinex/Upbit/Bithumb/Coinone/GOPAX/Livecoin/Coinnest/Coinrail
+23,Zilliqa,1242922526.0,0.170568,139411030.0,302050000.0,53.85%,3,Upbit/Bithumb/GOPAX
+24,Lisk,1066000730.0,10.0762,1627266.0,23989800.0,93.22%,12,Upbit/Exrates/Livecoin/LiteBit.eu/Coinroom/Coinroom/Coinroom/YoBit/BitBay/BitBay/Abucoins/Abucoins
+25,Bitcoin Gold,981079325.0,57.7145,8959061.0,32757900.0,72.65%,19,Bithumb/Upbit/Exmo/CEX.IO/Korbit/Coinone/YoBit/DSX/DSX/CEX.IO/Exrates/Coinnest/DSX/BitBay/BitFlip/BitBay/SouthXchange/BitFlip/Abucoins
+26,Zcash,940103151.0,241.269,5802462.0,57133700.0,89.84%,21,WEX/Upbit/Bithumb/Exmo/Kraken/Kraken/Coinroom/Coinroom/Coinroom/Exmo/The Rock Trading/CEX.IO/YoBit/GOPAX/CEX.IO/Kraken/LiteBit.eu/Cryptomate/Bitlish/Bitlish/Coinrail
+27,Aeternity,921574995.0,3.95491,0,27027900.0,100.00%,0,
+28,0x,919737449.0,1.74064,2822438.0,69552100.0,95.94%,3,Ethfinex/GOPAX/Livecoin
+29,Verge,888894662.0,0.0593345,284900.0,77797600.0,99.63%,3,LiteBit.eu/YoBit/SouthXchange
+30,Nano,825510461.0,6.19528,68.0,15348700.0,100.00%,2,BitFlip/BitFlip
+31,Ontology,815237100.0,7.17404,3695980.0,86399700.0,95.72%,1,Upbit
+32,Wanchain,732549859.0,6.90092,0,20400400.0,100.00%,0,
+33,Steem,727054942.0,2.84877,8105235.0,18461100.0,56.10%,3,Upbit/GOPAX/RuDEX
+34,Siacoin,715588897.0,0.0208209,42400670.0,63339900.0,33.06%,2,Upbit/QBTC
+35,Bytom,668047989.0,0.676847,61.0,68980200.0,100.00%,1,OEX
+36,BitShares,646404872.0,0.246379,0,48381300.0,100.00%,0,
+37,Decred,623706166.0,87.2836,3085440.0,14458100.0,78.66%,1,Upbit
+38,Waves,606626000.0,6.06626,1247706.0,31678600.0,96.06%,8,Upbit/Waves Decentralized Exchange/YoBit/Waves Decentralized Exchange/Exrates/LiteBit.eu/Cryptomate/Coinrail
+39,Augur,593630400.0,53.9664,105956779.0,232846000.0,54.49%,5,Upbit/Kraken/Kraken/Ethfinex/Livecoin
+40,Bitcoin Diamond,590606849.0,3.84566,192865.0,5753510.0,96.65%,3,QBTC/Exrates/Coinnest
+41,RChain,588046098.0,1.63294,0,649861.0,100.00%,0,
+42,Maker,586715464.0,949.028,15257.0,355967.0,95.71%,2,GOPAX/Ethfinex
+43,Stratis,569269058.0,5.75881,1275466.0,13727300.0,90.71%,7,Upbit/LiteBit.eu/Livecoin/SouthXchange/Bittylicious/Bittylicious/Coinrail
+44,Populous,558801511.0,15.1011,0,9651720.0,100.00%,0,
+45,IOStoken,510363840.0,0.0607576,164968.0,114896000.0,99.86%,1,Ethfinex
+46,Golem,492489052.0,0.590329,25723544.0,47672500.0,46.04%,4,Bithumb/Upbit/Ethfinex/Livecoin
+47,Bitcoin Private,492284991.0,24.0955,14829.0,543877.0,97.27%,1,Exrates
+48,Dogecoin,480633809.0,0.00420171,351930.0,25545600.0,98.62%,14,Fatbtc/Exrates/Livecoin/LiteBit.eu/YoBit/Sistemkoin/BitFlip/C-CEX/SouthXchange/Bittylicious/Bittylicious/Bittylicious/Cryptomate/BitFlip
+49,Status,439342425.0,0.126594,22501999.0,51999100.0,56.73%,4,Upbit/GOPAX/Ethfinex/Livecoin
+50,Hshare,400710909.0,9.32473,2311953.0,56314100.0,95.89%,4,Bithumb/Coinnest/Coinlink/C-CEX
+51,Mithril,396690541.0,1.29461,0,65461900.0,100.00%,0,
+52,DigixDAO,392688000.0,196.344,48.0,9630110.0,100.00%,1,Livecoin
+53,DigiByte,388976005.0,0.0379897,80660.0,10564100.0,99.24%,4,LiteBit.eu/YoBit/Bittylicious/Bittylicious
+54,Waltonchain,383657932.0,12.3188,90598.0,9875080.0,99.08%,3,Coinnest/Coinrail/Coinlink
+55,Aion,379243332.0,2.84988,84395.0,7067590.0,98.81%,1,Ethfinex
+56,Mixin,378410076.0,895.764,0,513026.0,100.00%,0,
+57,Loopring,367697731.0,0.642745,36116.0,17295100.0,99.79%,1,Ethfinex
+58,Nebulas,359784880.0,7.90736,0,28785400.0,100.00%,0,
+59,aelf,354572500.0,1.41829,18682160.0,98586700.0,81.05%,3,Bithumb/GOPAX/Ethfinex
+60,Basic Attention Token,347296000.0,0.347296,159489.0,7148140.0,97.77%,1,Ethfinex
+61,Dentacoin,319733210.0,0.000983109,0,2788280.0,100.00%,0,
+62,Ark,314415375.0,3.06786,1502325.0,7770430.0,80.67%,4,Upbit/LiteBit.eu/Cryptomate/Livecoin
+63,Ardor,303689852.0,0.303994,1916544.0,4089020.0,53.13%,2,Upbit/LiteBit.eu
+64,WaykiChain,303323982.0,2.11523,0,23850000.0,100.00%,0,
+65,Komodo,301090594.0,2.89345,1147080.0,3968110.0,71.09%,1,Upbit
+66,PIVX,296503921.0,5.27834,8207916.0,22120100.0,62.89%,5,Upbit/LiteBit.eu/Coinroom/Coinroom/Coinroom
+67,KuCoin Shares,284345594.0,3.7547,0,1386620.0,100.00%,0,
+68,Loom Network,282944154.0,0.489114,96.0,12146200.0,100.00%,1,YoBit
+69,Kyber Network,270459805.0,2.01636,11025569.0,35484600.0,68.93%,5,Bithumb/Ethfinex/Coinnest/Coinrail/Livecoin
+70,Gas,261359681.0,25.8047,1754.0,9421970.0,99.98%,1,Coinnest
+71,Elastos,255085134.0,49.5324,0,24313700.0,100.00%,0,
+72,Ethos,254496563.0,3.32028,5292830.0,14515600.0,63.54%,1,Bithumb
+73,Centrality,241538171.0,0.340631,0,346080.0,100.00%,0,
+74,Cryptonex,240194191.0,5.30655,399005.0,1802780.0,77.87%,4,Cryptonex/Cryptonex/Cryptonex/YoBit
+75,MonaCoin,233442450.0,3.93035,2613358.0,3112310.0,16.03%,2,Bitbank/Zaif
+76,Bancor,232114067.0,4.49315,0,16581200.0,100.00%,0,
+77,Substratum,224547593.0,0.586254,0,7492570.0,100.00%,0,
+78,QASH,222744900.0,0.636414,805183.0,2552950.0,68.46%,5,Quoine/Ethfinex/Quoine/GOPAX/Quoine
+79,FunFair,220715065.0,0.0454272,241431.0,7500240.0,96.78%,2,Ethfinex/Livecoin
+80,ReddCoin,219230562.0,0.00760987,143747.0,32739600.0,99.56%,2,LiteBit.eu/YoBit
+81,GXChain,217820400.0,3.63034,135610.0,13666700.0,99.01%,2,QBTC/OEX
+82,Cortex,215820973.0,1.4408,0,76618000.0,100.00%,0,
+83,Fusion,214777713.0,7.23539,0,7084660.0,100.00%,0,
+84,Polymath,208929142.0,0.870539,0,15137100.0,100.00%,0,
+85,Syscoin,205170455.0,0.384556,85.0,5511500.0,100.00%,2,Bittylicious/Bittylicious
+86,Dragonchain,200330459.0,0.840235,0,2958250.0,100.00%,0,
+87,Skycoin,198406995.0,22.5108,0,1297900.0,100.00%,0,
+88,Huobi Token,190641263.0,3.81281,0,123968000.0,100.00%,0,
+89,Nuls,187486400.0,4.68716,32375.0,32610800.0,99.90%,1,QBTC
+90,Veritaseum,182782615.0,89.7469,0,532626.0,100.00%,0,
+91,Matrix AI Network,182176500.0,1.21451,0,2467650.0,100.00%,0,
+92,Holo,181857877.0,0.00136515,0,5262460.0,100.00%,0,
+93,Nxt,175871942.0,0.176048,107.0,4989440.0,100.00%,2,LiteBit.eu/C-CEX
+94,Nexo,175431763.0,0.313271,0,3751730.0,100.00%,0,
+95,Enigma,174982684.0,2.33821,3264.0,6562650.0,99.95%,1,GOPAX
+96,Electroneum,174804830.0,0.0251315,0,1230710.0,100.00%,0,
+97,Storm,173870879.0,0.0420996,54108300.0,72253300.0,25.11%,3,Upbit/Coinnest/YoBit
+98,Factom,171170505.0,19.5733,0,1890890.0,100.00%,0,
+99,ZCoin,167661318.0,35.4693,43856.0,1429190.0,96.93%,4,Coinroom/Coinroom/Coinroom/LiteBit.eu
+100,CyberMiles,166202009.0,0.262198,0,76082100.0,100.00%,0,

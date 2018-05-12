@@ -41,7 +41,7 @@ def get_markets(currency):
 coinmarketcap = Market()
 lim = 100
 coins = coinmarketcap.ticker(limit=lim)["data"]
-print("rank,name,market_cap,price,true_volume,listed_volume,percent_fake_volume,n_exchanges_USD_pairs,exchanges")
+print("rank,name,market_cap,price,true_volume,listed_volume,percent_fake_volume,n_exchanges_fiat_pairs,exchanges")
 for rank in range(1,lim+1):
     for coin_id in coins:
         coin = coins[coin_id]
@@ -51,7 +51,13 @@ for rank in range(1,lim+1):
             n_exchanges = 0
             exchanges = []
             for market in markets:
-                if market["pair"].endswith("/USD") and market["volume"].startswith("$") and market["source"] != "Bitfinex":
+                if (market["pair"].endswith("/USD") or \
+                    market["pair"].endswith("/GBP") or \
+                    market["pair"].endswith("/EUR") or \
+                    market["pair"].endswith("/KRW") or \
+                    market["pair"].endswith("/CNY") or \
+                    market["pair"].endswith("/JPY")) and \
+                    market["volume"].startswith("$") and market["source"] != "Bitfinex":
                     n_exchanges += 1
                     true_volume += float(market["volume"].replace("$","").replace(",",""))
                     exchanges.append(market["source"])
