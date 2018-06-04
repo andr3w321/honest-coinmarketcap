@@ -70,7 +70,7 @@ for rank in range(1,lim+1):
                     market["pair"].endswith("/KRW") or \
                     market["pair"].endswith("/CNY") or \
                     market["pair"].endswith("/JPY")) and \
-                    market["volume"].startswith("$") and market["source"] != "Bitfinex":
+                    market["volume"].startswith("$") and market["source"] != "Bitfinex" and market["source"] != "Ethfinex":
                     n_exchanges += 1
                     true_volume += float(market["volume"].replace("$","").replace(",",""))
                     exchanges.append(market["source"])
