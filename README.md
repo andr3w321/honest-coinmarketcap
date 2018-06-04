@@ -3,3 +3,5 @@ This script will scrape coinmarket.com and output a csv of the trading volume fo
 Usage: `python print_data.py > output.csv`
 
 BTC Donations: 38hs9PyTbWG4SgyS4yvrR8CQ9PFXErJ5xk
+
+For the time being I'm maintaining an hourly update of this script at https://sportsbettingcalcs.com/honestcoinmarketcap
