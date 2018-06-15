@@ -50,7 +50,7 @@ if html:
     print("Contact: <a href='https://twitter.com/andr3w321'>@andr3w321</a><br/>")
     print("BTC Donations: 38hs9PyTbWG4SgyS4yvrR8CQ9PFXErJ5xk</div><br/>")
     print("<table border=1>")
-header = "rank,name,market_cap,price,fiat_volume,listed_volume,percent_crypto_to_crypto_volume,n_exchanges_fiat_pairs,exchanges"
+header = "rank,name,market_cap,price,fiat_volume,listed_volume,percent_crypto_to_crypto_volume,listed_volume/market_cap,n_exchanges_fiat_pairs,exchanges"
 if html:
     print("<tr><td>" + "</td><td>".join(header.split(",")) + "</td></tr>")
 else:
@@ -75,8 +75,8 @@ for rank in range(1,lim+1):
                     true_volume += float(market["volume"].replace("$","").replace(",",""))
                     exchanges.append(market["source"])
             if html:
-                print("<tr><td>{}</td><td>{}</td><td>${:,.0f}</td><td>${:,.2f}</td><td>${:,.0f}</td><td>${:,.0f}</td><td>{:.2f}%</td><td>{}</td><td>{}</td><td></tr>".format(coin["rank"],coin["name"],coin["quotes"]["USD"]["market_cap"],coin["quotes"]["USD"]["price"],true_volume,coin["quotes"]["USD"]["volume_24h"],100.0 - true_volume / coin["quotes"]["USD"]["volume_24h"] * 100.0,n_exchanges, "/".join(exchanges)))
+                print("<tr><td>{}</td><td>{}</td><td>${:,.0f}</td><td>${:,.2f}</td><td>${:,.0f}</td><td>${:,.0f}</td><td>{:.2f}%</td><td>{:.2f}%</td><td>{}</td><td>{}</td><td></tr>".format(coin["rank"],coin["name"],coin["quotes"]["USD"]["market_cap"],coin["quotes"]["USD"]["price"],true_volume,coin["quotes"]["USD"]["volume_24h"],100.0 - true_volume / coin["quotes"]["USD"]["volume_24h"] * 100.0,coin["quotes"]["USD"]["volume_24h"] / coin["quotes"]["USD"]["market_cap"] * 100.0,n_exchanges, "/".join(exchanges)))
             else:
-                print("{},{},{},{},{},{},{:.2f}%,{},{}".format(coin["rank"],coin["name"],coin["quotes"]["USD"]["market_cap"],coin["quotes"]["USD"]["price"],true_volume,coin["quotes"]["USD"]["volume_24h"],100.0 - true_volume / coin["quotes"]["USD"]["volume_24h"] * 100.0,n_exchanges, "/".join(exchanges)))
+                print("{},{},{},{},{},{},{:.2f}%,{:.2f}%,{},{}".format(coin["rank"],coin["name"],coin["quotes"]["USD"]["market_cap"],coin["quotes"]["USD"]["price"],true_volume,coin["quotes"]["USD"]["volume_24h"],100.0 - true_volume / coin["quotes"]["USD"]["volume_24h"] * 100.0,coin["quotes"]["USD"]["volume_24h"] / coin["quotes"]["USD"]["market_cap"] * 100.0,n_exchanges, "/".join(exchanges)))
 if html:
     print("</table></body></html>")
