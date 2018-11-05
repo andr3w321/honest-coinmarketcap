@@ -1,5 +1,7 @@
 # Honest CoinMarketCap
 
+[![Build Status](https://travis-ci.org/andr3w321/honest-coinmarketcap.svg?branch=master)](https://travis-ci.org/andr3w321/honest-coinmarketcap) [![Coverage Status](https://coveralls.io/repos/github/andr3w321/honest-coinmarketcap/badge.svg?branch=master)](https://coveralls.io/github/andr3w321/honest-coinmarketcap?branch=master)
+
 ## Overview
 
 This script will scrape coinmarket.com and output a csv of the trading volume for USD pairs only. It excludes Bitfinex.com pairs because those are incorrectly listed as USD and are actually USDT.

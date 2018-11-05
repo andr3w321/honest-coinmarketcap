@@ -1,0 +1,1638 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQ4BV1dWDxABVFdQAQIEX1M="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(16),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(17),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(19)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(19)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(19)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(19)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(19)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(16),s=t(17),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],16:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],17:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],18:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],19:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(17),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([b,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},b={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(16),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=x.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+x.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(16),u=t("ee"),d=t(15),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(12),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(18)},{}]},{},["loader",2,10,4,3]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"6d0ece54b7","agent":"","transactionName":"NFBbY0VUXEEEARUPXg0af0JZVkZbCgxOBV4KW1RWRV5XRgYDEUhHClBORBlBQFMLEQ0HRQZRA1RCR0BXCwEYOVUGQVheWw==","applicationID":"106263397","errorBeacon":"bam.nr-data.net","applicationTime":33}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electroneum (ETN) price, charts, market cap, and other metrics | CoinMarketCap</title>
+<link rel="preload" as="font" href="https://s2.coinmarketcap.com/static/cloud/fonts/glyphicons-regular.woff2" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://s2.coinmarketcap.com" crossorigin>
+<link rel="preconnect" href="https://files.coinmarketcap.com">
+<link rel="preconnect" href="//www.googletagmanager.com">
+<meta name="google-site-verification" content="EDc1reqlQ-zAgeRrrgAxRXNK-Zs9JgpE9a0wdaoSO9A">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://s2.coinmarketcap.com/static/img/coins/200x200/2137.png" />
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="200">
+<meta property="og:image:height" content="200">
+<meta property="og:title" content="Electroneum (ETN) price, charts, market cap, and other metrics | CoinMarketCap">
+<meta name="description" content="Get Electroneum price, charts, and other cryptocurrency info">
+<meta property="og:description" content="Get Electroneum price, charts, and other cryptocurrency info">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://coinmarketcap.com/currencies/electroneum/" />
+<meta property="og:url" content="https://coinmarketcap.com/currencies/electroneum/">
+<link rel="alternate" href="https://coinmarketcap.com/de/currencies/electroneum/" hreflang="de">
+<link rel="alternate" href="https://coinmarketcap.com/currencies/electroneum/" hreflang="en">
+<link rel="alternate" href="https://coinmarketcap.com/es/currencies/electroneum/" hreflang="es">
+<link rel="alternate" href="https://coinmarketcap.com/fil/currencies/electroneum/" hreflang="fil">
+<link rel="alternate" href="https://coinmarketcap.com/fr/currencies/electroneum/" hreflang="fr">
+<link rel="alternate" href="https://coinmarketcap.com/hi/currencies/electroneum/" hreflang="hi">
+<link rel="alternate" href="https://coinmarketcap.com/it/currencies/electroneum/" hreflang="it">
+<link rel="alternate" href="https://coinmarketcap.com/ja/currencies/electroneum/" hreflang="ja">
+<link rel="alternate" href="https://coinmarketcap.com/ko/currencies/electroneum/" hreflang="ko">
+<link rel="alternate" href="https://coinmarketcap.com/pt-br/currencies/electroneum/" hreflang="pt-br">
+<link rel="alternate" href="https://coinmarketcap.com/ru/currencies/electroneum/" hreflang="ru">
+<link rel="alternate" href="https://coinmarketcap.com/tr/currencies/electroneum/" hreflang="tr">
+<link rel="alternate" href="https://coinmarketcap.com/vi/currencies/electroneum/" hreflang="vi">
+<link rel="alternate" href="https://coinmarketcap.com/zh/currencies/electroneum/" hreflang="zh">
+<link rel="alternate" href="https://coinmarketcap.com/zh-tw/currencies/electroneum/" hreflang="zh-tw">
+<meta name="apple-itunes-app" content="app-id=1282107098">
+<link href="https://s2.coinmarketcap.com/static/cloud/compressed/base.1a77eed1.min.css" rel='stylesheet'>
+<link href="https://files.coinmarketcap.com/static/header_banner/header-banner-production.css" rel='stylesheet'>
+<script>
+        function getCookie(e){var n=" "+document.cookie,t=" "+e+"=",i=null,o=0,u=0;return n.length>0&&-1!=(o=n.indexOf(t))&&(o+=t.length,-1==(u=n.indexOf(";",o))&&(u=n.length),i=unescape(n.substring(o,u))),i}
+
+        var DEFAULT_CURRENCY = 'USD';
+        dataLayer = [{
+            'section': 'Cryptocurrency Details',
+            'subSection': 'Currencies',
+            'firstSessionDate': getCookie('gtm_session_first'),
+            'lastSessionDate': getCookie('gtm_session_last'),
+            'language': 'en',
+            'currency': getCookie('currency') || DEFAULT_CURRENCY,
+            'cryptocurrency': 'electroneum',
+            'siteTheme': getCookie('theme') || 'day'
+        }];
+        </script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MNVXW26');
+        </script>
+
+<script src="https://s2.coinmarketcap.com/static/cloud/compressed/basehead.443c6f62.min.js"></script>
+<script type="text/javascript">
+        var PWT={};
+        var notifyId;
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        PWT.jsLoaded = function(){
+            (function() {
+                var gads = document.createElement('script');
+                var useSSL = 'https:' == document.location.protocol; 
+                gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+                var node = document.getElementsByTagName('script')[0];
+                node.parentNode.insertBefore(gads, node);
+            })();
+        };
+        (function() {
+            var purl = window.location.href;
+            var url = '//ads.pubmatic.com/AdServer/js/pwt/157006/915';
+            var profileVersionId = '';
+            if(purl.indexOf('pwtv=')>0){
+                var regexp = /pwtv=(.*?)(&|$)/g;
+                var matches = regexp.exec(purl);
+                if(matches.length >= 2 && matches[1].length > 0){
+                    profileVersionId = '/'+matches[1];
+                }
+            }
+            var wtads = document.createElement('script');
+            wtads.async = true;
+            wtads.type = 'text/javascript';
+            wtads.src = url+profileVersionId+'/pwt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(wtads, node);
+        })();
+        </script>
+<script>
+           
+          googletag.cmd.push(function() {
+            var slotIds = []
+            
+                
+                    googletag.defineSlot('/48901027/non_landing_leaderboard_top', [728, 90], 'div-gpt-ad-1488495260324-9').addService(googletag.pubads());
+                    slotIds.push('div-gpt-ad-1488495260324-9')
+                    googletag.defineSlot('/48901027/non_landing_side', [160, 600], 'div-gpt-ad-1488495260324-10').addService(googletag.pubads());
+                    slotIds.push('div-gpt-ad-1488495260324-10')
+                    googletag.defineSlot('/48901027/non_landing_leaderboard_bottom', [728, 90], 'div-gpt-ad-1488495260324-8').addService(googletag.pubads());
+                    slotIds.push('div-gpt-ad-1488495260324-8')
+                
+            
+
+            
+                googletag.pubads().setTargeting("coin_id","2137");
+            
+
+            notifyId = window.OWT.registerExternalBidders(slotIds);
+            
+            var mapping = googletag.sizeMapping()
+              .addSize([1280,0], [1280, 90])
+              .addSize([970,0], [970, 90])
+              .addSize([750,0], [750, 90])
+              .addSize([0,0], [320, 100])
+              .build();
+            var headerBannerSlot = googletag.defineSlot('/48901027/full_width_top', [960, 90], 'div-gpt-ad-1517714727704-0')
+                .defineSizeMapping(mapping)
+                .addService(googletag.pubads())
+                .setCollapseEmptyDiv(true);
+
+            googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+                if (event.slot === headerBannerSlot) {
+                    var display = document.getElementById('div-gpt-ad-1517714727704-0').style.display,
+                        el = document.getElementById('header-banner-wrapper');
+                    if (display === 'none') {
+                        el.style.display = 'none';
+                    } else {
+                        el.style.visibility = 'visible';
+                    }
+                }
+            });
+
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+          });
+        </script>
+<script>
+        var apstagSlots = [
+        
+            
+                {
+                    slotID: 'div-gpt-ad-1488495260324-9',
+                    slotName: '/48901027/non_landing_leaderboard_top',
+                    sizes: [[728, 90]]
+                },
+                {
+                    slotID: 'div-gpt-ad-1488495260324-10',
+                    slotName: '/48901027/non_landing_side',
+                    sizes: [[160, 600]]
+                },
+                {
+                    slotID: 'div-gpt-ad-1488495260324-8',
+                    slotName: '/48901027/non_landing_leaderboard_bottom',
+                    sizes: [[728, 90]]
+                }
+            
+        
+        ];
+
+        //Load the UAM JavaScript Library
+        !function(a9,a,p,s,t,A,g){if(a[a9])return;function
+        q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
+        apstag.init({
+            pubID: '1edde03c-121e-457d-9c35-ad4fca989bac',
+            adServer: 'googletag',
+            bidTimeout: 2e3
+        });
+        apstag.fetchBids({
+            slots: apstagSlots
+        }, function(bids) {
+            googletag.cmd.push(function(){
+                apstag.setDisplayBids();
+                window.OWT.notifyExternalBiddingComplete(notifyId);
+            });
+        });
+        </script>
+<script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Product",
+            "name": "Electroneum",
+            "image": "https://s2.coinmarketcap.com/static/img/coins/200x200/2137.png",
+            
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0.018245",
+                    "priceCurrency": "USD"
+                }
+            
+        }
+    </script>
+<script>
+        var addthis_config = {
+            pubid: 'ra-5ae12f3c2c2a1335',
+            ui_click: true,
+            ui_disable: true,
+            data_ga_property: 'UA-40475998-1'
+        };
+        
+            var addthis_share = {
+                title: "The price of Electroneum is $0.018245!"
+            };
+        
+    </script>
+<script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae12f3c2c2a1335" async></script>
+<script>
+        window.lazySizesConfig = {
+            expFactor: 4
+        };
+    </script>
+<script src="https://s2.coinmarketcap.com/static/cloud/compressed/currencies_top.06f5ed29.min.js"></script>
+</head>
+<body>
+
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MNVXW26" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+<script>
+            NightMode.init();
+        </script>
+<div id="header-banner-wrapper">
+
+<div id="div-gpt-ad-1517714727704-0" class="centered">
+<script>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1517714727704-0'); });
+            </script>
+</div>
+<div class="header-banner-close banner-alert-close pointer">&times;</div>
+</div>
+<script>
+            if (getCookie("header-banner-noshow") === "1") {
+                document.getElementById('header-banner-wrapper').style.display = 'none';
+            }
+        </script>
+<header class="global-stats desktop text-small hidden-xs">
+<div class="container global-stats-container">
+<div class="pull-right dropdowns-col hidden-sm">
+<div class="btn-group">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle language-dropdown" data-toggle="dropdown">
+<span data-language-dropdown>English</span> <span class="caret"></span>
+</button>
+<ul class="dropdown-menu language-dropdown-menu text-center" role="menu">
+<li class="pointer"><a href="/de/currencies/electroneum/" data-language-toggle="de">Deutsch</a></li>
+<li class="pointer"><a href="/currencies/electroneum/" data-language-toggle="en">English</a></li>
+<li class="pointer"><a href="/es/currencies/electroneum/" data-language-toggle="es">Español</a></li>
+<li class="pointer"><a href="/fil/currencies/electroneum/" data-language-toggle="fil">Filipino</a></li>
+<li class="pointer"><a href="/fr/currencies/electroneum/" data-language-toggle="fr">Français</a></li>
+<li class="pointer"><a href="/hi/currencies/electroneum/" data-language-toggle="hi">हिन्दी</a></li>
+<li class="pointer"><a href="/it/currencies/electroneum/" data-language-toggle="it">Italiano</a></li>
+<li class="pointer"><a href="/ja/currencies/electroneum/" data-language-toggle="ja">日本語</a></li>
+<li class="pointer"><a href="/ko/currencies/electroneum/" data-language-toggle="ko">한국어</a></li>
+<li class="pointer"><a href="/pt-br/currencies/electroneum/" data-language-toggle="pt-br">Português Brasil</a></li>
+<li class="pointer"><a href="/ru/currencies/electroneum/" data-language-toggle="ru">Русский</a></li>
+<li class="pointer"><a href="/tr/currencies/electroneum/" data-language-toggle="tr">Türkçe</a></li>
+<li class="pointer"><a href="/vi/currencies/electroneum/" data-language-toggle="vi">Tiếng Việt</a></li>
+<li class="pointer"><a href="/zh/currencies/electroneum/" data-language-toggle="zh">简体中文</a></li>
+<li class="pointer"><a href="/zh-tw/currencies/electroneum/" data-language-toggle="zh-tw">繁體中文</a></li>
+</ul>
+</div>
+<div data-global-currency-switch class="btn-group global-currency-dropdown-container">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle global-currency-dropdown" data-toggle="dropdown">
+<span data-currency-display>USD</span> <span class="caret"></span>
+</button>
+<ul class="dropdown-menu global-currency-dropdown-menu text-center" role="menu">
+<li class="pointer"><a data-currency-toggle>USD</a></li>
+<li class="pointer"><a data-currency-toggle>DKK</a></li>
+<li class="pointer"><a data-currency-toggle>JPY</a></li>
+<li class="pointer"><a data-currency-toggle>PLN</a></li>
+<li class="pointer"><a data-currency-toggle>AUD</a></li>
+<li class="pointer"><a data-currency-toggle>EUR</a></li>
+<li class="pointer"><a data-currency-toggle>KRW</a></li>
+<li class="pointer"><a data-currency-toggle>RUB</a></li>
+<li class="pointer"><a data-currency-toggle>BRL</a></li>
+<li class="pointer"><a data-currency-toggle>GBP</a></li>
+<li class="pointer"><a data-currency-toggle>MXN</a></li>
+<li class="pointer"><a data-currency-toggle>SEK</a></li>
+<li class="pointer"><a data-currency-toggle>CAD</a></li>
+<li class="pointer"><a data-currency-toggle>HKD</a></li>
+<li class="pointer"><a data-currency-toggle>MYR</a></li>
+<li class="pointer"><a data-currency-toggle>SGD</a></li>
+<li class="pointer"><a data-currency-toggle>CHF</a></li>
+<li class="pointer"><a data-currency-toggle>HUF</a></li>
+ <li class="pointer"><a data-currency-toggle>NOK</a></li>
+<li class="pointer"><a data-currency-toggle>THB</a></li>
+<li class="pointer"><a data-currency-toggle>CLP</a></li>
+<li class="pointer"><a data-currency-toggle>IDR</a></li>
+<li class="pointer"><a data-currency-toggle>NZD</a></li>
+<li class="pointer"><a data-currency-toggle>TRY</a></li>
+<li class="pointer"><a data-currency-toggle>CNY</a></li>
+<li class="pointer"><a data-currency-toggle>ILS</a></li>
+<li class="pointer"><a data-currency-toggle>PHP</a></li>
+<li class="pointer"><a data-currency-toggle>TWD</a></li>
+<li class="pointer"><a data-currency-toggle>CZK</a></li>
+<li class="pointer"><a data-currency-toggle>INR</a></li>
+<li class="pointer"><a data-currency-toggle>PKR</a></li>
+<li class="pointer"><a data-currency-toggle>ZAR</a></li>
+</ul>
+</div>
+<button type="button" class="btn btn-default btn-xs js-theme-switch" title="Day/Night Mode"><span class="glyphicons glyphicons-moon glyphicons--in-button"></span></button>
+</div>
+<ul class="global-stats-list list-inline hidden js-global-stats text-bold">
+<li>Cryptocurrencies: <strong><a href="/all/views/all/"><span class="js-global-stats-cryptocurrencies"></span></a></strong></li>
+<li><span class="icon-bullet">&bull;</span> Markets: <strong><a href="/currencies/volume/24-hour/"><span class="js-global-stats-markets"></span></a></strong></li>
+<li><span class="icon-bullet">&bull;</span> Market Cap: <strong><a href="/charts/"><span class="js-global-stats-market-cap" data-global-currency-market-cap></span></a></strong></li>
+<li><span class="icon-bullet">&bull;</span> 24h Vol: <strong><a href="/charts/"><span class="js-global-stats-volume" data-global-currency-volume></span></a></strong></li>
+<li><span class="icon-bullet">&bull;</span> BTC Dominance: <strong><a href="/charts/#dominance-percentage"><span class="js-global-stats-btc-dominance"></span>%</a></strong></li>
+</ul>
+</div>
+</header>
+<nav class="navbar navbar-default sitenav sitenav--tablet hidden-md hidden-lg">
+<div class="container">
+<div class="sitenav-navbar flex-container js-sitenav">
+<div class="sitenav-menu-toggle">
+<button type="button" class="btn-transparent padding-0x menu-toggle collapsed" data-toggle="collapse" data-target="#sitenav-tablet" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="glyphicons glyphicons-menu-hamburger sitenav__main-icon"></span>
+</button>
+</div>
+<div class="sitenav-logo">
+<a href="/">
+<span class="cmc-logo cmc-logo_color_black cmc-logo_size_responsive"></span>
+</a>
+</div>
+<div class="sitenav-search-box js-sitenav-search-box">
+<form action="/search/" class="navbar-form quick-search-container" role="search">
+<div class="form-group has-feedback !bottom-margin-0x">
+<input type="text" class="form-control quick-search-box quick-search-box--tablet js-quick-search" placeholder="Search" name="q">
+<span class="glyphicons glyphicons-remove form-control-feedback js-sitenav-search-collapse" aria-hidden="true"></span>
+</div>
+</form>
+</div>
+<div class="sitenav-search-trigger js-sitenav-search-trigger">
+<span class="glyphicons glyphicons-search sitenav__main-icon"></span>
+</div>
+</div>
+ </div>
+<div class="collapse" id="sitenav-tablet">
+<ul class="list-group text-small bottom-margin-0x">
+<li class="list-group-item">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Rankings <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/">Market Cap - Top 100</a></li>
+<li><a href="/coins/">Market Cap - Top 100 (Coins)</a></li>
+<li><a href="/tokens/">Market Cap - Top 100 (Tokens)</a></li>
+<li><a href="/rankings/exchanges/">Exchanges - Top 100 (Adjusted Volume)</a></li>
+<li><a href="/rankings/exchanges/reported/">Exchanges - Top 100 (Reported Volume)</a></li>
+<li><a href="/exchanges/volume/24-hour/">Exchanges - All (24h Volume)</a></li>
+<li><a href="/currencies/volume/24-hour/">Cryptocurrencies - All (24h Volume)</a></li>
+<li><a href="/currencies/volume/monthly/">Cryptocurrencies - All (30d Volume)</a></li>
+</ul>
+</li>
+<li class="list-group-item">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Trending <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/gainers-losers/">Gainers and Losers</a></li>
+<li><a href="/new/">Recently Added</a></li>
+</ul>
+</li>
+<li class="list-group-item">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/charts/">Global Charts</a></li>
+<li><a href="/historical/">Historical Snapshots</a></li>
+<li><a href="/converter/">Currency Converter Calculator</a></li>
+<li><a href="/glossary/">Crypto Glossary</a></li>
+<li><a href="/watchlist/">Watchlist</a></li>
+<li><a href="/widget/">Website Widgets</a></li>
+</ul>
+</li>
+<li class="list-group-item">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://coinmarketcap.com/advertising" target="_blank" rel="noopener">Advertising</a></li>
+<li><a href="/events/">Events Calendar</a></li>
+<li><a href="/newsletter/" target="_blank" rel="noopener">Newsletter</a></li>
+<li><a href="https://pro.coinmarketcap.com" target="_blank" rel="noopener">Professional API</a></li>
+<li><a href="https://www.ledger.com/products/ledger-nano-s?r=70935dc26797" target="_blank" rel="nofollow noopener">Keep your crypto safe</a></li>
+</ul>
+</li>
+<li class="list-group-item">
+<div class="btn-group">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle language-dropdown" data-toggle="dropdown">
+<span data-language-dropdown>English</span> <span class="caret"></span>
+</button>
+<ul class="dropdown-menu language-dropdown-menu text-center" role="menu">
+<li class="pointer"><a href="/de/currencies/electroneum/" data-language-toggle="de">Deutsch</a></li>
+<li class="pointer"><a href="/currencies/electroneum/" data-language-toggle="en">English</a></li>
+<li class="pointer"><a href="/es/currencies/electroneum/" data-language-toggle="es">Español</a></li>
+<li class="pointer"><a href="/fil/currencies/electroneum/" data-language-toggle="fil">Filipino</a></li>
+<li class="pointer"><a href="/fr/currencies/electroneum/" data-language-toggle="fr">Français</a></li>
+<li class="pointer"><a href="/hi/currencies/electroneum/" data-language-toggle="hi">हिन्दी</a></li>
+<li class="pointer"><a href="/it/currencies/electroneum/" data-language-toggle="it">Italiano</a></li>
+<li class="pointer"><a href="/ja/currencies/electroneum/" data-language-toggle="ja">日本語</a></li>
+<li class="pointer"><a href="/ko/currencies/electroneum/" data-language-toggle="ko">한국어</a></li>
+<li class="pointer"><a href="/pt-br/currencies/electroneum/" data-language-toggle="pt-br">Português Brasil</a></li>
+<li class="pointer"><a href="/ru/currencies/electroneum/" data-language-toggle="ru">Русский</a></li>
+<li class="pointer"><a href="/tr/currencies/electroneum/" data-language-toggle="tr">Türkçe</a></li>
+<li class="pointer"><a href="/vi/currencies/electroneum/" data-language-toggle="vi">Tiếng Việt</a></li>
+<li class="pointer"><a href="/zh/currencies/electroneum/" data-language-toggle="zh">简体中文</a></li>
+<li class="pointer"><a href="/zh-tw/currencies/electroneum/" data-language-toggle="zh-tw">繁體中文</a></li>
+</ul>
+</div>
+<div data-global-currency-switch class="btn-group global-currency-dropdown-container">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle global-currency-dropdown" data-toggle="dropdown">
+<span data-currency-display>USD</span> <span class="caret"></span>
+</button>
+<ul class="dropdown-menu global-currency-dropdown-menu text-center" role="menu">
+<li class="pointer"><a data-currency-toggle>USD</a></li>
+<li class="pointer"><a data-currency-toggle>DKK</a></li>
+<li class="pointer"><a data-currency-toggle>JPY</a></li>
+<li class="pointer"><a data-currency-toggle>PLN</a></li>
+<li class="pointer"><a data-currency-toggle>AUD</a></li>
+<li class="pointer"><a data-currency-toggle>EUR</a></li>
+<li class="pointer"><a data-currency-toggle>KRW</a></li>
+<li class="pointer"><a data-currency-toggle>RUB</a></li>
+<li class="pointer"><a data-currency-toggle>BRL</a></li>
+<li class="pointer"><a data-currency-toggle>GBP</a></li>
+<li class="pointer"><a data-currency-toggle>MXN</a></li>
+<li class="pointer"><a data-currency-toggle>SEK</a></li>
+<li class="pointer"><a data-currency-toggle>CAD</a></li>
+<li class="pointer"><a data-currency-toggle>HKD</a></li>
+<li class="pointer"><a data-currency-toggle>MYR</a></li>
+<li class="pointer"><a data-currency-toggle>SGD</a></li>
+<li class="pointer"><a data-currency-toggle>CHF</a></li>
+<li class="pointer"><a data-currency-toggle>HUF</a></li>
+<li class="pointer"><a data-currency-toggle>NOK</a></li>
+<li class="pointer"><a data-currency-toggle>THB</a></li>
+<li class="pointer"><a data-currency-toggle>CLP</a></li>
+<li class="pointer"><a data-currency-toggle>IDR</a></li>
+<li class="pointer"><a data-currency-toggle>NZD</a></li>
+<li class="pointer"><a data-currency-toggle>TRY</a></li>
+<li class="pointer"><a data-currency-toggle>CNY</a></li>
+<li class="pointer"><a data-currency-toggle>ILS</a></li>
+<li class="pointer"><a data-currency-toggle>PHP</a></li>
+<li class="pointer"><a data-currency-toggle>TWD</a></li>
+<li class="pointer"><a data-currency-toggle>CZK</a></li>
+<li class="pointer"><a data-currency-toggle>INR</a></li>
+<li class="pointer"><a data-currency-toggle>PKR</a></li>
+<li class="pointer"><a data-currency-toggle>ZAR</a></li>
+</ul>
+</div>
+<button type="button" class="btn btn-default btn-xs js-theme-switch" title="Day/Night Mode"><span class="glyphicons glyphicons-moon glyphicons--in-button"></span></button>
+</li>
+<li class="list-group-item">
+<a href="https://www.facebook.com/CoinMarketCap" target="_blank" rel="noopener"><span class="social social-facebook icon_size_lg icon_color_facebook-blue"></span></a>
+&nbsp;
+<a href="https://twitter.com/CoinMarketCap" target="_blank" rel="noopener"><span class="social social-twitter icon_size_lg icon_color_twitter-blue"></span></a>
+</li>
+</ul>
+</div>
+</nav>
+<header class="global-stats mobile text-small text-bold visible-xs js-global-stats">
+<div class="global-stats-uncollapsed">
+Market Cap: <strong><a href="/charts/"><span class="js-global-stats-market-cap" data-global-currency-market-cap></span></a></strong>
+<button class="pull-right dropdown-toggle" data-toggle="collapse" data-target="#global-stats-mobile-1" aria-expanded="false" aria-controls="global-stats-mobile-1"><span class="caret"></span></button>
+</div>
+<div id="global-stats-mobile-1" class="collapse">
+<ul class="list-group bottom-margin-0x">
+<li class="list-group-item">24h Vol: <strong><a href="/charts/"><span class="js-global-stats-volume" data-global-currency-volume></span></a></strong></li>
+<li class="list-group-item">BTC Dominance: <strong><a href="/charts/#dominance-percentage"><span class="js-global-stats-btc-dominance"></span>%</a></strong></li>
+<li class="list-group-item">Cryptocurrencies: <strong><a href="/all/views/all/"><span class="js-global-stats-cryptocurrencies"></span></a></strong></li>
+<li class="list-group-item last">Markets: <strong><a href="/currencies/volume/24-hour/"><span class="js-global-stats-markets"></span></a></strong></li>
+</ul>
+</div>
+</header>
+<nav class="navbar navbar-default sitenav sitenav--desktop hidden-xs hidden-sm bottom-margin-1x">
+<div class="container">
+<div class="sitenav-block">
+<a href="/">
+<span class="cmc-logo cmc-logo_color_black cmc-logo_size_lg"></span>
+</a>
+</div>
+<div class="sitenav-block">
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Rankings <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/">Market Cap - Top 100</a></li>
+<li><a href="/coins/">Market Cap - Top 100 (Coins)</a></li>
+<li><a href="/tokens/">Market Cap - Top 100 (Tokens)</a></li>
+<li><a href="/rankings/exchanges/">Exchanges - Top 100 (Adjusted Volume)</a></li>
+<li><a href="/rankings/exchanges/reported/">Exchanges - Top 100 (Reported Volume)</a></li>
+<li><a href="/exchanges/volume/24-hour/">Exchanges - All (24h Volume)</a></li>
+<li><a href="/currencies/volume/24-hour/">Cryptocurrencies - All (24h Volume)</a></li>
+<li><a href="/currencies/volume/monthly/">Cryptocurrencies - All (30d Volume)</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Trending <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/gainers-losers/">Gainers and Losers</a></li>
+ <li><a href="/new/">Recently Added</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/charts/">Global Charts</a></li>
+<li><a href="/historical/">Historical Snapshots</a></li>
+<li><a href="/converter/">Currency Converter Calculator</a></li>
+<li><a href="/glossary/">Crypto Glossary</a></li>
+<li><a href="/watchlist/">Watchlist</a></li>
+<li><a href="/widget/">Website Widgets</a></li>
+</ul>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://coinmarketcap.com/advertising" target="_blank" rel="noopener">Advertising</a></li>
+<li><a href="/events/">Events Calendar</a></li>
+<li><a href="/newsletter/" target="_blank" rel="noopener">Newsletter</a></li>
+<li><a href="https://pro.coinmarketcap.com" target="_blank" rel="noopener">Professional API</a></li>
+<li><a href="https://www.ledger.com/products/ledger-nano-s?r=70935dc26797" target="_blank" rel="nofollow noopener">Keep your crypto safe</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="sitenav-block">
+<form action="/search/" class="navbar-form quick-search-container" role="search">
+<div class="form-group has-feedback">
+<input type="text" class="form-control quick-search-box js-quick-search" placeholder="Search" name="q">
+<span class="glyphicons glyphicons-search form-control-feedback" aria-hidden="true"></span>
+</div>
+</form>
+</div>
+</div>
+</nav>
+<div class="container main-section">
+<div class="row">
+<div class="col-xl-10 padding-top-1x">
+<div id="leaderboard" class="text-center">
+
+<div id='div-gpt-ad-1488495260324-9' class="centered leaderboard">
+<script>
+                                    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1488495260324-9'); });
+                                    </script>
+</div>
+</div>
+<div class="vertical-spacer bottom-margin-2x"></div>
+<div class="details-panel flex-container bottom-margin-2x">
+<div class="details-panel-item--header flex-container">
+<h1 class="details-panel-item--name">
+<img src="https://s2.coinmarketcap.com/static/img/coins/32x32/2137.png" class="logo-32x32" alt="Electroneum">
+Electroneum
+<span class="text-bold h3 text-gray text-large">(ETN)</span>
+</h1>
+<div class="details-panel-item--price bottom-margin-1x">
+<span id="quote_price" data-currency-price data-usd="0.0182453907447">
+<span class="h2 text-semi-bold details-panel-item--price__value" data-currency-value>0.018245</span>
+<span class="text-large" data-currency-code>USD</span>
+</span>
+<span class="h2 text-semi-bold negative_change">
+(<span data-format-percentage data-format-value="-0.0255605">-0.03</span>%)
+</span>
+<br>
+<span class="text-gray">
+<span data-format-price-crypto data-format-value="2.8368155685e-06">
+0.00000284
+</span>
+BTC
+</span>
+<span class=" negative_change">
+(<span data-format-percentage data-format-value="-1.01038">-1.01</span>%)
+</span>
+<div class="toolbar-buttons">
+<div>
+<a class="addthis_button_compact toolbar-button">
+<span class="glyphicons glyphicons-share-alt"></span>
+Share
+</a>
+</div>
+<div>
+<span class="toolbar-button watchlist-star js-watchlist-star" data-watchlist-id="2137" data-watchlist-slug="electroneum" data-placement="bottom" data-title-add="Add to Watchlist" data-title-remove="Remove from Watchlist" data-title-full="You have reached the limit for your watchlist" data-text-watch="Watch" data-text-unwatch="Unwatch">
+<span class="glyphicons glyphicons-star"></span>
+<span class="js-watchlist-star-label"></span>
+</span>
+</div>
+</div>
+</div>
+<div class="details-panel-item--buy-buttons margin-bottom--lv3">
+<button type="button" class="buy-button js-buy-button" data-container="body" data-toggle="popover" data-placement="bottom" data-id="buy">
+Buy
+<span class="glyphicons glyphicons-chevron-down"></span>
+</button>
+<button type="button" class="buy-button js-buy-button" data-container="body" data-toggle="popover" data-placement="bottom" data-id="wallet">
+Get Wallet
+<span class="glyphicons glyphicons-chevron-down"></span>
+</button>
+<button type="button" class="buy-button js-buy-button" data-container="body" data-toggle="popover" data-placement="bottom" data-id="loan">
+Get Loan
+<span class="glyphicons glyphicons-chevron-down"></span>
+</button>
+<br>
+<div class="buy-buttons__sponsored">
+<a class="buy-buttons__sponsored__link" href="https://goo.gl/forms/qCrWt4mRJvzgjrZL2" target="_blank" rel="nofollow noopener">
+<svg class="buy-buttons__sponsored__icon" width="13" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M11.304 7.768c-.23.144-.501.161-.707.047-.262-.146-.406-.486-.406-.96V5.435c0-.685-.274-1.172-.734-1.304-.779-.223-1.365.716-1.585 1.068L6.5 7.394V4.713c-.016-.617-.22-.986-.605-1.098-.256-.073-.638-.044-1.01.516L1.807 9A5.285 5.285 0 0 1 1.181 6.5 5.324 5.324 0 0 1 6.5 1.182 5.324 5.324 0 0 1 11.816 6.5l.001.014v.015c.027.568-.16 1.02-.513 1.24zM12.997 6.5V6.471A6.507 6.507 0 0 0 6.498 0 6.507 6.507 0 0 0 0 6.5C0 10.084 2.915 13 6.499 13a6.477 6.477 0 0 0 4.418-1.733.59.59 0 1 0-.803-.867 5.298 5.298 0 0 1-3.615 1.418 5.304 5.304 0 0 1-3.957-1.77l2.775-4.39v2.024c0 .972.383 1.286.704 1.378.321.092.812.03 1.327-.795l1.526-2.438c.05-.079.094-.147.136-.205v1.232c0 .91.37 1.636 1.013 1.994.58.323 1.31.294 1.905-.076.721-.449 1.11-1.275 1.07-2.272z" fill="#7E899F" fill-rule="evenodd" /></svg>
+SPONSORED
+</a>
+</div>
+<div class="hide js-buy-button-content-buy">
+<h4>Buy</h4>
+<ul class="list-unstyled">
+<li>
+<img data-src="https://s2.coinmarketcap.com/static/cloud/img/cryptocom_32x32_1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload" width="16" alt="Crypto.com" />
+<a href="https://crypto.onelink.me/PSQc?pid=cmc_button&c=buy_campaign&utm_source=cmc_button&utm_medium=display%20&utm_campaign=buy_campaign&af_dp=monaco%3A%2F%2F&af_web_dp=https%3A%2F%2Fcrypto.com%2Fen%2Findex.html" target="_blank" rel="nofollow noopener">
+Crypto.com
+<svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="css-83uoqv">
+<path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0, 0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path>
+<polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8, 14.9 62.8,22.9 71.5,22.9"></polygon>
+</svg>
+</a>
+<p class="text-small text-gray">The best place to buy crypto</p>
+</li>
+</ul>
+</div>
+<div class="hide js-buy-button-content-wallet">
+<h4>Get Wallet</h4>
+<ul class="list-unstyled">
+<li>
+<img data-src="https://s2.coinmarketcap.com/static/cloud/img/atomicwallet_32x32_1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload" width="16" alt="Atomic Wallet" />
+<a href="https://atomicwallet.io" target="_blank" rel="nofollow noopener">
+Atomic Wallet
+<svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="css-83uoqv">
+<path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0, 0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path>
+<polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8, 14.9 62.8,22.9 71.5,22.9"></polygon>
+</svg>
+</a>
+<p class="text-small text-gray">Universal Secure Multi-Asset Wallet</p>
+</li>
+</ul>
+</div>
+<div class="hide js-buy-button-content-loan">
+<h4>Crypto-Backed Loan</h4>
+<ul class="list-unstyled">
+<li>
+<img data-src="https://s2.coinmarketcap.com/static/cloud/img/nexo_32x32_1.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload" width="16" alt="Nexo" />
+<a href="https://nexo.io/?utm_source=CMC_Button_Listing&utm_campaign=CMC_Button_Listing" target="_blank" rel="nofollow noopener">
+Nexo - Instant Crypto Loans
+<svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="css-83uoqv">
+<path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0, 0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path>
+<polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8, 14.9 62.8,22.9 71.5,22.9"></polygon>
+</svg>
+</a>
+<p class="text-small text-gray">Get instant cash in 40+ fiat currencies using crypto as collateral without selling it.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="details-panel-item--marketcap-stats flex-container">
+<div class="coin-summary-item">
+<h5 class="coin-summary-item-header">Market Cap</h5>
+<div class="coin-summary-item-detail">
+<span data-currency-market-cap data-usd="150884800.951">
+<span data-currency-value>150,884,801</span>
+<span data-currency-code>USD</span>
+</span><br>
+<span class="text-gray">
+<span data-format-market-cap data-format-value="23459.7525686">
+23,460
+</span>
+BTC
+<br>
+</span>
+</div>
+</div>
+<div class="coin-summary-item">
+<h5 class="coin-summary-item-header">Volume (24h)</h5>
+<div class="coin-summary-item-detail">
+<span data-currency-volume data-usd="1547523.93087">
+<span data-currency-value>1,547,524</span>
+<span data-currency-code>USD</span>
+</span><br>
+<span class="text-gray">
+<span data-format-volume-crypto data-format-value="240.61090503">
+240.61
+</span>
+BTC
+</span>
+</div>
+</div>
+<div class="coin-summary-item">
+<h5 class="coin-summary-item-header">Circulating Supply</h5>
+<div class="coin-summary-item-detail details-text-medium">
+<span data-format-supply data-format-value="8269748949.89">
+8,269,748,950
+</span>
+ETN
+</div>
+</div>
+<div class="coin-summary-item">
+<h5 class="coin-summary-item-header">Max Supply</h5>
+<div class="coin-summary-item-detail details-text-medium">
+<span data-format-supply data-format-value="21000000000">
+21,000,000,000
+</span>
+ETN
+</div>
+</div>
+</div>
+<ul class="list-unstyled details-panel-item--links">
+<li><span class="glyphicons glyphicons-charts details-list-item-icon" title="Rank"></span>
+<span class="label label-success"> Rank 52</span>
+</li>
+<li><span class="glyphicons glyphicons-link details-list-item-icon" title="Website"></span> <a href="http://electroneum.com/" target="_blank" rel="noopener">Website</a></li>
+<li><span class="glyphicons glyphicons-bullhorn details-list-item-icon" title="Announcement"></span> <a href="https://bitcointalk.org/index.php?topic=2353282.0" target="_blank" rel="noopener">Announcement</a></li>
+<li><span class="glyphicons glyphicons-search details-list-item-icon" title="Explorer"></span> <a href="https://blockexplorer.electroneum.com/" target="_blank" rel="noopener">Explorer</a></li>
+<li><span class="glyphicons glyphicons-show-thumbnails-with-lines details-list-item-icon" title="Message Board"></span> <a href="https://electroneum.com/blog/" target="_blank" rel="noopener">Message Board</a></li>
+<li><span class="glyphicons glyphicons-show-thumbnails-with-lines details-list-item-icon" title="Message Board"></span> <a href="https://community.electroneum.com/" target="_blank" rel="noopener">Message Board 2</a></li>
+<li><span class="glyphicons glyphicons-comments details-list-item-icon" title="Chat"></span> <a href="https://t.me/joinchat/DxoSakHOdk5mqsE-LelfVg" target="_blank" rel="noopener">Chat</a></li>
+<li><span class="glyphicons glyphicons-embed-close details-list-item-icon" title="Source Code"></span> <a href="https://github.com/electroneum" target="_blank" rel="noopener">Source Code</a></li>
+<li><span class="glyphicons glyphicons-file details-list-item-icon" title="Technical Documentation"></span> <a href="http://electroneum.com/overview-white-paper.pdf" target="_blank" rel="noopener">Technical Documentation</a></li>
+<li><span class="glyphicons glyphicons-tag details-list-item-icon" title="Tags"></span>
+<span class="label label-warning">Coin</span>
+<span class="label label-warning">Mineable</span>
+</li>
+</ul>
+</div>
+<div class="row bottom-margin-1x">
+<div class="col-xs-12">
+<ul class="nav nav-tabs text-left" role="tablist">
+<li><a href="#charts" role="tab" data-toggle="tab"> <span class="glyphicons glyphicons-charts nav-tabs__icon"></span> Charts</a></li>
+<li><a href="#markets" role="tab" data-toggle="tab"><span class="glyphicons glyphicons-transfer nav-tabs__icon"></span> Markets</a></li>
+<li><a href="#social" role="tab" data-toggle="tab"><span class="glyphicons glyphicons-globe nav-tabs__icon"></span> Social</a></li>
+<li><a href="#tools" role="tab" data-toggle="tab"><span class="glyphicons glyphicons-wrench nav-tabs__icon"></span> Tools</a></li>
+<li><a href="/currencies/electroneum/historical-data/"><span class="glyphicons glyphicons-calendar nav-tabs__icon"></span>&nbsp;Historical Data</a></li>
+</ul>
+</div>
+<div class="col-xs-12 tab-content">
+<div id="charts" class="tab-pane active">
+<div class="padding-top-1x">
+<div id="highcharts-loading" class="text-center">Loading data from server...<div><span class="loading"></span></div></div>
+<div id="highcharts-nodata" class="hidden text-center">No chart data found</div>
+</div>
+<div id="highcharts-graph"></div>
+<br>
+</div>
+<div id="markets" class="tab-pane">
+<div class="padding-top-1x">
+<div class="pull-right btn-row">
+<div class="btn-group dropdown js-market-pair-filter">
+<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+Pair: <span class="js-filter-value">All</span> <span class="caret"></span>
+</button>
+<ul class="dropdown-menu" role="menu">
+<li><a class="js-filter-toggle" data-showall="1" href="#">All</a></li>
+<li><a class="js-filter-toggle" data-value="BTC" href="#">BTC</a></li>
+<li><a class="js-filter-toggle" data-value="DOGE" href="#">DOGE</a></li>
+<li><a class="js-filter-toggle" data-value="ETH" href="#">ETH</a></li>
+<li><a class="js-filter-toggle" data-value="GBP" href="#">GBP</a></li>
+<li><a class="js-filter-toggle" data-value="INR" href="#">INR</a></li>
+<li><a class="js-filter-toggle" data-value="LTC" href="#">LTC</a></li>
+<li><a class="js-filter-toggle" data-value="NZDT" href="#">NZDT</a></li>
+<li><a class="js-filter-toggle" data-value="USDT" href="#">USDT</a></li>
+</ul>
+</div>
+<div class="btn-group dropdown js-market-category-filter">
+<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+Category: <span class="js-filter-value">All</span> <span class="caret"></span>
+</button>
+<ul class="dropdown-menu" role="menu">
+<li><a class="js-filter-toggle" data-showall="1" href="#">All</a></li>
+<li><a class="js-filter-toggle" data-value="Spot" href="#">Spot</a></li>
+<li><a class="js-filter-toggle" data-value="Derivatives" href="#">Derivatives</a></li>
+<li><a class="js-filter-toggle" data-value="OTC" href="#">OTC</a></li>
+</ul>
+</div>
+<div class="btn-group dropdown js-market-fee-type-filter">
+<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+Fee Type: <span class="js-filter-value">All</span> <span class="caret"></span>
+</button>
+<ul class="dropdown-menu" role="menu">
+<li><a class="js-filter-toggle" data-showall="1" href="#">All</a></li>
+<li><a class="js-filter-toggle" data-value="Percentage" href="#">Percentage</a></li>
+<li><a class="js-filter-toggle" data-value="No Fees" href="#">No Fees</a></li>
+<li><a class="js-filter-toggle" data-value="Transaction Mining" href="#">Transaction Mining</a></li>
+<li><a class="js-filter-toggle" data-value="Unknown" href="#">Unknown</a></li>
+</ul>
+</div>
+<div id="currency-switch" class="btn-group">
+<button id="currency-switch-button" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+USD <span class="caret"></span>
+</button>
+<ul class="dropdown-menu" role="menu">
+<li class="pointer" data-fiat-item><a class="price-toggle" data-currency="usd" data-fiat>USD</a></li>
+<li class="pointer"><a class="price-toggle" data-currency="usd">USD</a></li>
+<li class="pointer"><a class="price-toggle" data-currency="btc" data-currencyid="bitcoin">BTC</a></li>
+<li class="pointer"><a class="price-toggle" data-currency="eth" data-currencyid="ethereum">ETH</a></li>
+<li class="pointer"><a class="price-toggle" data-currency="xrp" data-currencyid="ripple">XRP</a></li>
+<li class="pointer"><a class="price-toggle" data-currency="bch" data-currencyid="bitcoin-cash">BCH</a></li>
+<li class="pointer"><a class="price-toggle" data-currency="ltc" data-currencyid="litecoin">LTC</a></li>
+<li class="pointer"><a class="price-toggle" data-currency="native">Unconverted</a></li>
+</ul>
+</div>
+</div>
+<h2 class="bottom-margin-1x">Electroneum Markets</h2>
+<div class="table-responsive">
+<table id="markets-table" class="table no-border table-condensed floating-header">
+<thead>
+<tr>
+<th class="text-right sortable">#</th>
+<th id="th-source" class="sortable">Source</th>
+<th id="th-pair" class="sortable">Pair</th>
+<th class="text-right sortable">Volume (24h)</th>
+<th class="text-right sortable">Price</th>
+<th class="text-right sortable">Volume (%)</th>
+<th class="text-right sortable">Category</th>
+<th class="text-right sortable">Fee Type</th>
+<th class="text-right sortable">Updated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="text-right">1</td>
+<td data-sort="Liquid">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/112.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="Liquid">
+<a class="link-secondary" href="/exchanges/liquid/">Liquid</a>
+</td>
+<td data-sort="ETN/ETH"><a href="https://app.liquid.com/exchange/ETNETH" target="_blank">ETN/ETH</a></td>
+<td class="text-right" data-sort="837715.954398">
+<span class="volume" data-usd="837715.954398" data-btc="130.24909659" data-native="45644290.14">
+$837,716
+</span>
+</td>
+<td class="text-right" data-sort="0.0183531379682">
+<span class="price" data-usd="0.0183531379682" data-btc="2.853568238e-06" data-native="8.719e-05">
+$0.018353
+</span>
+</td>
+<td class="text-right" data-sort="54.1326655885">
+<span data-format-percentage data-format-value="54.1326655885">54.13</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+<tr>
+<td class="text-right">2</td>
+<td data-sort="Kucoin">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/311.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="Kucoin">
+<a class="link-secondary" href="/exchanges/kucoin/">Kucoin</a>
+</td>
+<td data-sort="ETN/BTC"><a href="https://www.kucoin.com/#/trade/ETN-BTC" target="_blank">ETN/BTC</a></td>
+<td class="text-right" data-sort="341972.19196">
+<span class="volume" data-usd="341972.19196" data-btc="53.17025279" data-native="18788075.1908">
+ $341,972
+</span>
+</td>
+<td class="text-right" data-sort="0.0182015554274">
+<span class="price" data-usd="0.0182015554274" data-btc="2.83e-06" data-native="2.83e-06">
+$0.018202
+</span>
+</td>
+<td class="text-right" data-sort="22.098022857">
+<span data-format-percentage data-format-value="22.098022857">22.10</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+<tr>
+<td class="text-right">3</td>
+<td data-sort="Cryptopia">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/98.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="Cryptopia">
+<a class="link-secondary" href="/exchanges/cryptopia/">Cryptopia</a>
+</td>
+<td data-sort="ETN/BTC"><a href="https://www.cryptopia.co.nz/Exchange?market=ETN_BTC" target="_blank">ETN/BTC</a></td>
+<td class="text-right" data-sort="260382.50925">
+<span class="volume" data-usd="260382.50925" data-btc="40.484589579" data-native="14510605.5839">
+$260,383
+</span>
+</td>
+<td class="text-right" data-sort="0.0179442896263">
+<span class="price" data-usd="0.0179442896263" data-btc="2.79e-06" data-native="2.79e-06">
+$0.017944
+</span>
+</td>
+<td class="text-right" data-sort="16.8257500939">
+<span data-format-percentage data-format-value="16.8257500939">16.83</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+<tr>
+<td class="text-right">4</td>
+<td data-sort="Liquid">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/112.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="Liquid">
+<a class="link-secondary" href="/exchanges/liquid/">Liquid</a>
+</td>
+<td data-sort="ETN/BTC"><a href="https://app.liquid.com/exchange/ETNBTC" target="_blank">ETN/BTC</a></td>
+<td class="text-right" data-sort="20561.8614211">
+<span class="volume" data-usd="20561.8614211" data-btc="3.1969832498" data-native="1129676.06">
+$20,562
+</span>
+</td>
+<td class="text-right" data-sort="0.0182015554274">
+<span class="price" data-usd="0.0182015554274" data-btc="2.83e-06" data-native="2.83e-06">
+$0.018202
+</span>
+</td>
+<td class="text-right" data-sort="1.32869424576">
+<span data-format-percentage data-format-value="1.32869424576">1.33</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+<tr>
+<td class="text-right">5</td>
+<td data-sort="Kucoin">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/311.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="Kucoin">
+<a class="link-secondary" href="/exchanges/kucoin/">Kucoin</a>
+</td>
+<td data-sort="ETN/ETH"><a href="https://www.kucoin.com/#/trade/ETN-ETH" target="_blank">ETN/ETH</a></td>
+<td class="text-right" data-sort="20083.5593989">
+<span class="volume" data-usd="20083.5593989" data-btc="3.12261626902" data-native="1103013.7489">
+$20,084
+</span>
+</td>
+<td class="text-right" data-sort="0.0182078957936">
+<span class="price" data-usd="0.0182078957936" data-btc="2.83098580786e-06" data-native="8.65e-05">
+$0.018208
+</span>
+</td>
+<td class="text-right" data-sort="1.29778667705">
+<span data-format-percentage data-format-value="1.29778667705">1.30</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+<tr>
+<td class="text-right">6</td>
+<td data-sort="Cryptopia">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/98.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="Cryptopia">
+<a class="link-secondary" href="/exchanges/cryptopia/">Cryptopia</a>
+</td>
+<td data-sort="ETN/USDT"><a href="https://www.cryptopia.co.nz/Exchange?market=ETN_USDT" target="_blank">ETN/USDT</a></td>
+<td class="text-right" data-sort="18579.0757754">
+<span class="volume" data-usd="18579.0757754" data-btc="2.88869732337" data-native="1009461.90689">
+$18,579
+</span>
+</td>
+<td class="text-right" data-sort="0.018404930041">
+<span class="price" data-usd="0.018404930041" data-btc="2.86162093255e-06" data-native="0.01846764">
+$0.018405
+</span>
+</td>
+<td class="text-right" data-sort="1.20056791399">
+<span data-format-percentage data-format-value="1.20056791399">1.20</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+<tr>
+<td class="text-right">7</td>
+<td data-sort="Sistemkoin">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/388.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="Sistemkoin">
+<a class="link-secondary" href="/exchanges/sistemkoin/">Sistemkoin</a>
+</td>
+<td data-sort="ETN/BTC"><a href="https://sistemkoin.com/#/" target="_blank">ETN/BTC</a></td>
+<td class="text-right" data-sort="13222.2647161">
+<span class="volume" data-usd="13222.2647161" data-btc="2.05581381744" data-native="726435.977893">
+$13,222
+</span>
+</td>
+<td class="text-right" data-sort="0.0182015554274">
+<span class="price" data-usd="0.0182015554274" data-btc="2.83e-06" data-native="2.83e-06">
+$0.018202
+</span>
+</td>
+<td class="text-right" data-sort="0.854414232463">
+<span data-format-percentage data-format-value="0.854414232463">0.85</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+<tr>
+<td class="text-right">8</td>
+<td data-sort="Cryptopia">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/98.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="Cryptopia">
+<a class="link-secondary" href="/exchanges/cryptopia/">Cryptopia</a>
+</td>
+<td data-sort="ETN/LTC"><a href="https://www.cryptopia.co.nz/Exchange?market=ETN_LTC" target="_blank">ETN/LTC</a></td>
+<td class="text-right" data-sort="13054.1068634">
+<span class="volume" data-usd="13054.1068634" data-btc="2.02966842975" data-native="715881.431933">
+$13,054
+</span>
+</td>
+<td class="text-right" data-sort="0.0182350125049">
+<span class="price" data-usd="0.0182350125049" data-btc="2.83520194715e-06" data-native="0.00033899">
+$0.018235
+</span>
+</td>
+<td class="text-right" data-sort="0.843547980293">
+<span data-format-percentage data-format-value="0.843547980293">0.84</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+<tr>
+<td class="text-right">9</td>
+<td data-sort="TradeOgre">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/354.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="TradeOgre">
+<a class="link-secondary" href="/exchanges/tradeogre/">TradeOgre</a>
+</td>
+<td data-sort="ETN/BTC"><a href="https://tradeogre.com/exchange/BTC-ETN" target="_blank">ETN/BTC</a></td>
+<td class="text-right" data-sort="11820.2861311">
+<span class="volume" data-usd="11820.2861311" data-btc="1.83783248" data-native="654032.911032">
+$11,820
+</span>
+</td>
+<td class="text-right" data-sort="0.0180729225269">
+<span class="price" data-usd="0.0180729225269" data-btc="2.81e-06" data-native="2.81e-06">
+$0.018073
+</span>
+</td>
+<td class="text-right" data-sort="0.763819279">
+<span data-format-percentage data-format-value="0.763819279">0.76</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+<tr>
+<td class="text-right">10</td>
+<td data-sort="Bitbns">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/376.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="Bitbns">
+<a class="link-secondary" href="/exchanges/bitbns/">Bitbns</a>
+</td>
+<td data-sort="ETN/INR"><a href="https://bitbns.com/trade/#/etn" target="_blank">ETN/INR</a></td>
+<td class="text-right" data-sort="7045.40933181">
+<span class="volume" data-usd="7045.40933181" data-btc="1.09542882137" data-native="375380.7">
+$7,045
+</span>
+</td>
+<td class="text-right" data-sort="0.0187687042296">
+<span class="price" data-usd="0.0187687042296" data-btc="2.91818098633e-06" data-native="1.37">
+$0.018769
+</span>
+</td>
+<td class="text-right" data-sort="0.455269814656">
+<span data-format-percentage data-format-value="0.455269814656">0.46</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+<tr>
+<td class="text-right">11</td>
+<td data-sort="Cryptopia">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/98.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="Cryptopia">
+<a class="link-secondary" href="/exchanges/cryptopia/">Cryptopia</a>
+</td>
+<td data-sort="ETN/DOGE"><a href="https://www.cryptopia.co.nz/Exchange?market=ETN_DOGE" target="_blank">ETN/DOGE</a></td>
+<td class="text-right" data-sort="1659.3093545">
+<span class="volume" data-usd="1659.3093545" data-btc="0.257991438806" data-native="90386.721972">
+$1,659
+</span>
+</td>
+<td class="text-right" data-sort="0.0183578883966">
+<span class="price" data-usd="0.0183578883966" data-btc="2.8543068404e-06" data-native="5.00999999">
+$0.018358
+</span>
+</td>
+<td class="text-right" data-sort="0.107223502099">
+<span data-format-percentage data-format-value="0.107223502099">0.11</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+<tr>
+<td class="text-right">12</td>
+<td data-sort="Cryptomate">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/144.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="Cryptomate">
+<a class="link-secondary" href="/exchanges/cryptomate/">Cryptomate</a>
+</td>
+<td data-sort="ETN/GBP"><a href="https://cryptomate.co.uk" target="_blank">ETN/GBP</a></td>
+<td class="text-right" data-sort="611.659001408">
+
+<span class="volume" data-usd="611.659001408" data-btc="0.0951014862927" data-native="31343.2377965">
+$612
+</span>
+</td>
+<td class="text-right" data-sort="0.0195148633137">
+<span class="price" data-usd="0.0195148633137" data-btc="3.03419470925e-06" data-native="0.01499526">
+$0.019515
+</span>
+</td>
+<td class="text-right" data-sort="0.0395250108388">
+<span data-format-percentage data-format-value="0.0395250108388">0.04</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+<tr>
+<td class="text-right">13</td>
+<td data-sort="CoinBene">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/343.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="CoinBene">
+<a class="link-secondary" href="/exchanges/coinbene/">CoinBene</a>
+</td>
+<td data-sort="ETN/BTC"><a href="https://www.coinbene.com/#/market?pairId=ETNBTC" target="_blank">ETN/BTC</a></td>
+<td class="text-right" data-sort="595.388531368">
+<span class="volume" data-usd="595.388531368" data-btc="0.0925717338" data-native="33909.06">
+$595
+</span>
+</td>
+<td class="text-right" data-sort="0.0175583909247">
+<span class="price" data-usd="0.0175583909247" data-btc="2.73e-06" data-native="2.73e-06">
+$0.017558
+</span>
+</td>
+<td class="text-right" data-sort="0.038473623541">
+<span data-format-percentage data-format-value="0.038473623541">0.04</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+<tr>
+<td class="text-right">14</td>
+<td data-sort="Coindeal">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/405.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="Coindeal">
+<a class="link-secondary" href="/exchanges/coindeal/">Coindeal</a>
+</td>
+<td data-sort="ETN/BTC"><a href="https://frontend.coindeal.com/market/trade.html?pair=ETN/BTC" target="_blank">ETN/BTC</a></td>
+<td class="text-right" data-sort="209.789519945">
+<span class="volume" data-usd="209.789519945" data-btc="0.03261833" data-native="10590.3668831">
+$210
+</span>
+</td>
+<td class="text-right" data-sort="0.0198094666842">
+<span class="price" data-usd="0.0198094666842" data-btc="3.08e-06" data-native="3.08e-06">
+$0.019809
+</span>
+</td>
+<td class="text-right" data-sort="0.0135564637005">
+<span data-format-percentage data-format-value="0.0135564637005">0.01</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+<tr>
+<td class="text-right">15</td>
+<td data-sort="Cryptopia">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/98.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="Cryptopia">
+<a class="link-secondary" href="/exchanges/cryptopia/">Cryptopia</a>
+</td>
+<td data-sort="ETN/NZDT"><a href="https://www.cryptopia.co.nz/Exchange?market=ETN_NZDT" target="_blank">ETN/NZDT</a></td>
+<td class="text-right" data-sort="10.5652124413">
+<span class="volume" data-usd="10.5652124413" data-btc="0.00164269209453" data-native="564.05009433">
+$11
+</span>
+</td>
+<td class="text-right" data-sort="0.0187309824916">
+<span class="price" data-usd="0.0187309824916" data-btc="2.91231596457e-06" data-native="0.02811616">
+$0.018731
+</span>
+ </td>
+<td class="text-right" data-sort="0.000682717225275">
+<span data-format-percentage data-format-value="0.000682717225275">0.00</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+<tr>
+<td class="text-right">16</td>
+<td data-sort="OEX">
+<img data-src="https://s2.coinmarketcap.com/static/img/exchanges/16x16/334.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="logo lazyload" alt="OEX">
+<a class="link-secondary" href="/exchanges/oex/">OEX</a>
+</td>
+<td data-sort="ETN/BTC"><a href="https://www.oex.com/" target="_blank">ETN/BTC</a></td>
+<td class="text-right" data-sort="0.0">
+<span class="volume" data-usd="0.0" data-btc="0.0" data-native="0.0">
+$0
+</span>
+</td>
+<td class="text-right" data-sort="0.0180086060766">
+*
+<span class="price" data-usd="0.0180086060766" data-btc="2.8e-06" data-native="2.8e-06">
+$0.018009
+</span>
+</td>
+<td class="text-right" data-sort="0.0">
+<span data-format-percentage data-format-value="0.0">0.00</span>%
+</td>
+<td class="text-right">Spot</td>
+<td class="text-right">Percentage</td>
+<td class="text-right ">Recently</td>
+</tr>
+</tbody>
+</table>
+</div>
+* Price Excluded<br>
+** Volume Excluded<br>
+*** Price/Volume Excluded - Outlier Detected
+</div>
+</div>
+<div id="social" class="tab-pane">
+<div class="padding-top-1x">
+<h2 class="bottom-margin-1x">Electroneum Social Media Feeds</h2>
+</div>
+<div class="row">
+<div class="col-sm-6 text-left">
+<a class="twitter-timeline" href="https://twitter.com/electroneum" data-widget-id="506520279636377601" data-screen-name="electroneum">Tweets by @electroneum</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<div id="reddit" class="col-sm-6 text-left">
+</div>
+</div>
+</div>
+<div id="tools" class="tab-pane">
+<div class="padding-top-1x">
+<h2 class="bottom-margin-1x">Tools for Electroneum</h2>
+</div>
+<div class="row bottom-margin-2x">
+<div class="col-md-2">
+<strong>Website Widget</strong>
+</div>
+<div class="col-md-6">
+<textarea class="form-control bottom-margin-1x" rows="6" data-snippet-container>&lt;script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js">&lt;/script&gt;
+&lt;div class="coinmarketcap-currency-widget" data-currencyid="2137" data-base="USD"  data-secondary="BTC">&lt;/div&gt;</textarea>
+<a class="btn btn-primary bottom-margin-1x" href="/widget/?c=electroneum" target="_blank" role="button" style="width:100%">Customize this widget</a>
+</div>
+<div class="col-md-4">
+<div class="coinmarketcap-currency-widget" data-currencyid="2137" data-base="USD" data-secondary="BTC" data-ticker="true" style=""></div>
+</div>
+</div>
+<hr class="bottom-margin-2x">
+<div class="row bottom-margin-2x">
+<div class="col-md-2">
+<strong>API Ticker</strong>
+</div>
+<div class="col-md-6">
+<a href="https://api.coinmarketcap.com/v2/ticker/2137/" target="_blank">https://api.coinmarketcap.com/v2/ticker/2137/</a>
+</div>
+<div class="col-md-4">
+<a href="/api/" target="_blank" class="text-small">[API Docs]</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="metadata" class="hidden" data-slug="electroneum" data-platformsymbol="" data-apidomain="https://graphs2.coinmarketcap.com" data-mobile="False" data-platform="False">
+</div>
+<div class="vertical-spacer-2x"></div>
+
+<div id='div-gpt-ad-1488495260324-8' class="centered leaderboard">
+<script>
+                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1488495260324-8'); });
+                                </script>
+</div>
+
+<div class="modal fade" id="donate_btc" tabindex="-1" role="dialog" aria-labelledby="donate_btc_label" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header text-center">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title" id="donate_btc_label">Donate Bitcoin</h4>
+</div>
+<div class="modal-body text-center">
+ <strong>3CMCRgEm8HVz3DrWaCCid3vAANE42jcEv9</strong> <br /> <img src="https://s2.coinmarketcap.com/static/cloud/img/qrcodes/donate_bitcoin.png" alt="Donate Bitcoin"><br />
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="donate_ltc" tabindex="-1" role="dialog" aria-labelledby="donate_ltc_label" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header text-center">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title" id="donate_ltc_label">Donate Litecoin</h4>
+</div>
+<div class="modal-body text-center">
+<strong>LTdsVS8VDw6syvfQADdhf2PHAm3rMGJvPX</strong> <br /> <img src="https://s2.coinmarketcap.com/static/cloud/img/qrcodes/donate_litecoin.png" alt="Donate Litecoin"><br />
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="donate_eth" tabindex="-1" role="dialog" aria-labelledby="donate_eth_label" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header text-center">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title" id="donate_eth_label">Donate Ethereum</h4>
+</div>
+<div class="modal-body text-center">
+<strong>0x0074709077B8AE5a245E4ED161C971Dc4c3C8E2B</strong> <br /> <img src="https://s2.coinmarketcap.com/static/cloud/img/qrcodes/donate_ethereum.png" alt="Donate Ethereum"><br />
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="donate_bch" tabindex="-1" role="dialog" aria-labelledby="donate_bch_label" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header text-center">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title" id="donate_bch_label">Donate Bitcoin Cash</h4>
+</div>
+<div class="modal-body text-center">
+<strong>1LVXG4Z4oF6TrJfmUfSuLX8nqb8c5eCwha</strong> <br /> <img src="https://s2.coinmarketcap.com/static/cloud/img/qrcodes/donate_bitcoin_cash.png" alt="Donate Bitcoin Cash"><br />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xl-2 padding-top-2x">
+<div class="pull-right visible-xl">
+
+<div id='div-gpt-ad-1488495260324-10' class="skyscraper">
+<script>
+                                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1488495260324-10'); });
+                                </script>
+</div>
+</div>
+<div class="clearfix"></div>
+<section class="related-links-panel">
+<h3 class="related-links-panel__header h5">Related Cryptocurrencies</h3>
+<ul class="related-links-panel__list">
+ <li class="related-links-panel__item overflow-ellipsis">
+<img class="related-links-panel__logo lazyload" data-src="https://s2.coinmarketcap.com/static/img/coins/16x16/213.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="MonaCoin" />
+<a href="/currencies/monacoin/" class="link-secondary">MonaCoin (MONA)</a>
+</li>
+<li class="related-links-panel__item overflow-ellipsis">
+<img class="related-links-panel__logo lazyload" data-src="https://s2.coinmarketcap.com/static/img/coins/16x16/1521.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Komodo" />
+<a href="/currencies/komodo/" class="link-secondary">Komodo (KMD)</a>
+</li>
+<li class="related-links-panel__item overflow-ellipsis">
+<img class="related-links-panel__logo lazyload" data-src="https://s2.coinmarketcap.com/static/img/coins/16x16/2682.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Holo" />
+<a href="/currencies/holo/" class="link-secondary">Holo (HOT)</a>
+</li>
+<li class="related-links-panel__item overflow-ellipsis">
+<img class="related-links-panel__logo lazyload" data-src="https://s2.coinmarketcap.com/static/img/coins/16x16/693.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Verge" />
+<a href="/currencies/verge/" class="link-secondary">Verge (XVG)</a>
+</li>
+<li class="related-links-panel__item overflow-ellipsis">
+<img class="related-links-panel__logo lazyload" data-src="https://s2.coinmarketcap.com/static/img/coins/16x16/1925.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Waltonchain" />
+<a href="/currencies/waltonchain/" class="link-secondary">Waltonchain (WTC)</a>
+</li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+<footer>
+<div class="container flex-container">
+<div class="footer-section footer-section--brand text-center">
+<div class="margin-bottom--lv1">
+<span class="cmc-logo cmc-logo_color_grey cmc-logo_size_md footer__cmc-logo"></span>
+</div>
+<div class="text-gray-light">&copy; 2018 CoinMarketCap</div>
+</div>
+<div class="footer-section footer-section--links">
+<section class="margin-bottom--lv2">
+<h5 class="footer-header">Useful Links</h5>
+<div class="row">
+<div class="col-xs-6">
+<ul class="list-unstyled">
+<li><a href="/advertising/" target="_blank">Advertise</a></li>
+<li><a href="https://pro.coinmarketcap.com" target="_blank" rel="noopener">Professional API</a></li>
+<li><a href="/api/">Public API</a></li>
+<li><a href="/disclaimer/">Disclaimer</a></li>
+<li><a href="/privacy/">Privacy</a></li>
+<li><a href="/terms/">Terms</a></li>
+<li><a href="/faq/">FAQ</a></li>
+</ul>
+</div>
+<div class="col-xs-6">
+<ul class="list-unstyled">
+<li><a href="/request/" target="_blank">Request Form</a></li>
+<li><a href="/careers/">Careers</a></li>
+<li><a href="https://blog.coinmarketcap.com" target="_blank" rel="noopener">Blog</a></li>
+<li><a href="/newsletter/" target="_blank">Newsletter</a></li>
+<li><a href="https://www.facebook.com/CoinMarketCap" target="_blank" rel="noopener">Facebook</a></li>
+<li><a href="https://twitter.com/CoinMarketCap" target="_blank" rel="noopener">Twitter</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="margin-bottom--lv2">
+<div class="row">
+<div class="col-xs-6">
+<h5 class="footer-header">Night Mode</h5>
+<div class="btn-group" data-toggle="buttons">
+<label class="btn btn-default btn-sm" data-night-mode-off>
+<input type="radio"> Off
+</label>
+<label class="btn btn-default btn-sm" data-night-mode-on>
+<input type="radio"> On
+</label>
+</div>
+</div>
+<div class="col-xs-6">
+<h5 class="footer-header">Downloads</h5>
+<a href="https://appstore.com/coinmarketcapcom/" target="_blank" rel="noopener">
+<span class="app-store-badge"></span>
+</a>
+</div>
+</div>
+</section>
+</div>
+<div class="footer-section footer-section--donate overflow-ellipsis">
+<section class="margin-bottom--lv2">
+<h5 class="footer-header">Donate</h5>
+<ul class="list-unstyled">
+<li class="overflow-ellipsis">BTC: <a data-toggle="modal" data-target="#donate_btc">3CMCRgEm8HVz3DrWaCCid3vAANE42jcEv9</a></li>
+<li class="overflow-ellipsis">LTC: <a data-toggle="modal" data-target="#donate_ltc">LTdsVS8VDw6syvfQADdhf2PHAm3rMGJvPX</a></li>
+<li class="overflow-ellipsis">ETH: <a data-toggle="modal" data-target="#donate_eth">0x0074709077B8AE5a245E4ED161C971Dc4c3C8E2B</a></li>
+<li class="overflow-ellipsis">BCH: <a data-toggle="modal" data-target="#donate_bch">1LVXG4Z4oF6TrJfmUfSuLX8nqb8c5eCwha</a></li>
+</ul>
+</section>
+<section class="margin-bottom--lv2">
+<h5 class="footer-header">Secure your crypto assets</h5>
+<ul class="list-unstyled">
+<li><a href="https://www.ledger.com/products/ledger-nano-s?r=70935dc26797" target="_blank" rel="nofollow noopener">Ledger</a></li>
+</ul>
+</section>
+</div>
+</div>
+</footer>
+<div class="banner-alert banner-alert-fixed-bottom hide js-cookie-policy-banner">
+<div class="banner-alert-close">
+<button type="button" class="banner-alert-close-button js-close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+<div class="banner-alert-body">
+We use cookies to offer you a better browsing experience, analyze site traffic, personalize content, and serve targeted advertisements. Read about how we use cookies and how you can control them on our <a href="/privacy/">Privacy Policy</a>. If you continue to use this site, you consent to our use of cookies.
+</div>
+</div>
+<div id="currency-exchange-rates" data-pkr="0.00748166990872" data-all="0.00912159080544" data-ron="0.244115474431" data-mnt="0.00040171990012" data-ugx="0.000266199249463" data-ttd="0.148307441326" data-aud="0.720080821871" data-cup="0.0388349514563" data-ngn="0.00274982126162" data-byn="0.470278183654" data-gtq="0.129393256903" data-hrk="0.152940276822" data-clp="0.00146284376829" data-eur="1.13782988533" data-nok="0.119491430134" data-amd="0.00204870561171" data-mxn="0.04987727696" data-gel="0.408665339867" data-try="0.18476283104" data-crc="0.00162530715055" data-aed="0.272236183401" data-gbp="1.30140213066" data-bam="0.581193620586" data-ars="0.0281056773468" data-mdl="0.0584696641257" data-btc="6452.7338965" data-sek="0.110171847149" data-mur="0.0288849599566" data-irr="2.35310901737e-05" data-cny="0.144337634595" data-bdt="0.0119232144986" data-pen="0.296960255433" data-kzt="0.00268571735511" data-rub="0.0150991029623" data-omr="2.59728791196" data-mkd="0.0184859968574" data-jod="1.40903217807" data-mmk="0.000626487862862" data-pln="0.264062796245" data-kes="0.00984736582964" data-hkd="0.127671200697" data-ves="0.0154826019138" data-cop="0.000314270077006" data-dzd="0.00843312531624" data-idr="6.6790451637e-05" data-krw="0.000889584741843" data-bgn="0.581619204601" data-isk="0.00825014696399" data-ils="0.270421852682" data-bob="0.14465596039" data-dkk="0.152534730633" data-twd="0.0325448296078" data-kwd="3.29163923634" data-brl="0.269729062551" data-zar="0.0699992125089" data-sgd="0.726824474797" data-uzs="0.000121354049539" data-usd="1.0" data-chf="0.994890243708" data-xau="1228.74275042" data-xpd="1129.95627069" data-xag="14.6564727967" data-huf="0.00353074948261" data-bmd="1.0" data-rsd="0.00960655360624" data-jmd="0.0078480615288" data-azn="0.587371512482" data-uah="0.0356669951002" data-lkr="0.00573306241097" data-tnd="0.350103648185" data-nzd="0.666199882616" data-iqd="0.000837725874258" data-xpt="866.491057812" data-cad="0.764368211455" data-lbp="0.000660611065235" data-khr="0.000247126121586" data-myr="0.239734968198" data-bhd="2.65269580211" data-inr="0.0136997841092" data-jpy="0.00883286237028" data-czk="0.0440292273056" data-sar="0.266613343998" data-ltc="53.7343382327" data-nad="0.0695527099996" data-qar="0.274532950817" data-pab="1.0" data-xrp="0.463699827407" data-vnd="4.30270286157e-05" data-uyu="0.0304679050631" data-nio="0.0309558401938" data-kgs="0.014555047751" data-ssp="0.00767675340886" data-mad="0.105059673895" data-php="0.0187796953933" data-eth="210.182701931" data-npr="0.00854869337026" data-bch="572.85744526" data-ghs="0.208515697687" data-egp="0.0556935518006" data-hnl="0.0415214954083" data-dop="0.01998001998" data-thb="0.0303214069133"></div>
+<div class="scroll-to-top">
+<button class="btn"><span class="glyphicons glyphicons-chevron-up"></span></button>
+</div>
+<script>
+            var LANG_CODE = 'en';
+            var STATIC_DOMAIN = 's2.coinmarketcap.com';
+        </script>
+<script src="https://s2.coinmarketcap.com/static/cloud/compressed/base.7099fdfd.min.js"></script>
+<script>
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // Handle sponsored popovers
+        (function () {
+            $('.js-buy-button').each(function () {
+                var $this = $(this);
+                var id = $this.data('id');
+                $this.popover({
+                    html: true,
+                    trigger: 'manual',
+                    content: $('.js-buy-button-content-' + id).html()
+                });
+            });
+
+            var activePopover = null;
+
+            function hidePopover(element) {
+                $(element).popover('hide');
+                activePopover = null;
+            }
+
+            $('.js-buy-button').on('click', function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                var $this = $(this);
+
+                if (activePopover === this) {
+                    hidePopover(activePopover);
+                } else if (activePopover) {
+                    hidePopover(activePopover);
+                    $this.popover('show');
+                    activePopover = this;
+                } else {
+                    $this.popover('show');
+                    activePopover = this;
+                }
+            });
+
+            $('body').on('click', function (event) {
+                var $target = $(event.target);
+                if ($target.data('toggle') !== 'popover' && $target.parents('.popover.in').length === 0) {
+                    hidePopover(activePopover);
+                }
+            });
+        })();
+    </script>
+<script src="https://s2.coinmarketcap.com/static/cloud/compressed/highcharts.c76bd9fb.js"></script>
+<script src="https://s2.coinmarketcap.com/static/cloud/compressed/detail.90ffff5d.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+        /* Reddit lazy load hack */
+        var oScript = document.createElement("script");
+        document.write = function(text) {
+            document.getElementById("reddit").innerHTML += text;
+        };
+        oScript.src = "https://www.reddit.com/r/Electroneum.embed?limit=9";
+        document.body.appendChild(oScript);
+    
+});
+
+const PHRASES = {
+    contextButtonTitle: "Chart context menu",
+    downloadCSV: "Download CSV",
+    downloadJPEG: "Download JPEG image",
+    downloadPDF: "Download PDF document",
+    downloadPNG: "Download PNG image",
+    downloadSVG: "Download SVG vector image",
+    downloadXLS: "Download XLS",
+    drillUpText: "Back to {series.name}",
+    loading: "Loading...",
+    noData: "No data to display",
+    printChart: "Print chart",
+    resetZoom: "Reset zoom",
+    resetZoomTitle: "Reset zoom level 1:1",
+    viewData: "View data table",
+    '1d': "1d",
+    '7d': "7d",
+    '1m': "1m",
+    '3m': "3m",
+    '1y': "1y",
+    'ytd': "YTD",
+    'all': "ALL",
+    dateFormat: "%A, %b %d %Y, %H:%M:%S UTC",
+    months: {
+        full: {mar: 'March',feb: 'February',aug: 'August',sep: 'September',apr: 'April',jun: 'June',jul: 'July',jan: 'January',may: 'May',nov: 'November',dec: 'December',oct: 'October'},
+        short: {mar: 'Mar',feb: 'Feb',aug: 'Aug',sep: 'Sep',apr: 'Apr',jun: 'Jun',jul: 'Jul',jan: 'Jan',may: 'May',nov: 'Nov',dec: 'Dec',oct: 'Oct'}
+    },
+    weekdays: {
+        full: {wed: 'Wednesday',sun: 'Sunday',thu: 'Thursday',mon: 'Monday',fri: 'Friday',tue: 'Tuesday',sat: 'Saturday'},
+        short: {wed: 'Wed',sun: 'Sun',thu: 'Thu',mon: 'Mon',fri: 'Fri',tue: 'Tue',sat: 'Sat'}
+    },
+    emptyTable: "No data available in table",
+    zeroRecords: "No matching records found",
+    sortAscending: ": activate to sort column ascending",
+    sortDescending: ": activate to sort column descending",
+    'K': "K",
+    'M': "M",
+    'B': "B",
+    'T': "T",
+    chartTitle: "Electroneum Charts",
+    marketCap: "Market Cap",
+    priceUSD: "Price (USD)",
+    priceBTC: "Price (BTC)",
+    pricePlatform: "",
+    volume: "24h Vol",
+    linearScale: "Linear Scale",
+    logScale: "Log Scale"
+};
+var polyglot = new Polyglot({phrases: PHRASES});
+</script>
+<script>
+            $( document ).ready(function() {
+                // GTM Session Set
+                var maxExpire = new Date('2038-01-19 00:00:00');
+                if (Cookies.get("gtm_session_first") === undefined) {
+                    Cookies.set("gtm_session_first", new Date(), {expires: maxExpire})
+                }            
+
+                Cookies.set("gtm_session_last", new Date(), {expires: maxExpire})
+                
+                // Header Banner Prefs
+                $(".header-banner-close").on('click', function () {
+                    Cookies.set("header-banner-noshow", "1", {expires: 1})
+                    $('#header-banner-wrapper').fadeOut();
+                    dataLayer.push({
+                        'event': 'customEvent',
+                        'eventCategory': 'Header Banner',
+                        'eventAction': 'Close',
+                    });
+                });
+
+            });
+
+            (function () {
+                var polyglot = new Polyglot({phrases: {
+                    cryptocurrencies: "Cryptocurrencies",
+                    exchanges: "Exchanges"
+                }});
+
+                initQuickSearch({
+                    currencyDataURL: 'https://' + STATIC_DOMAIN + '/generated/search/quick_search.json',
+                    exchangeDataURL: 'https://' + STATIC_DOMAIN + '/generated/search/quick_search_exchanges.json',
+                    currencySuggestionTemplate: function (context) {
+                        var template = "/currencies/%25s/";
+                        context.url = template.replace('%25s', context.slug);
+                        return Handlebars.templates['quick_search'](context);
+                    },
+                    exchangeSuggestionTemplate: function (context) {
+                        var template = "/exchanges/%25s/";
+                        context.url = template.replace('%25s', context.slug);
+                        return Handlebars.templates['quick_search_exchanges'](context);
+                    },
+                    currencyLimit: 6,
+                    exchangeLimit: 4
+                }, polyglot);
+                SiteNav('.js-sitenav');
+
+                $('[data-language-toggle]').on('click', function () {
+                    dataLayer.push({
+                        'event': 'customEvent',
+                        'eventCategory': 'Language Dropdown',
+                        'eventAction': 'Language Selected',
+                        'eventLabel': $(this).data('language-toggle')
+                    });
+                });
+
+                var language = $('[data-language-toggle="' + 'en' + '"]').html();
+                $('[data-language-dropdown]').html(language);
+
+                NightMode.initSwitch();
+                ThemeSwitch('.js-theme-switch');
+                ScrollToTop('.scroll-to-top');
+                CookiedDismissableAlert({
+                    selector: '.js-cookie-policy-banner',
+                    cookieKey: 'cmc_gdpr_hide'
+                });
+            })();
+        </script>
+</body>
+</html>
