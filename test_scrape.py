@@ -15,7 +15,7 @@ class ScrapeTest(unittest.TestCase):
     def setUp(self):
         self.maxDiff = None
 
-    def test_scrapes_monacoin_snapshot(self):
+    def test_scrapes_electroneum_snapshot(self):
         self.assertEqual(
             [
               {
