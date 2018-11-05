@@ -3,6 +3,7 @@ import json
 from bs4 import BeautifulSoup
 import requests
 import datetime
+import time
 
 def ppjson(data):
     """ Pretty print json helper """
@@ -16,11 +17,12 @@ def get_html_soup(url):
     if res.status_code == 200:
         return get_soup(res)
     else:
-        print("ERROR: Coinmarketcap.com", res.status_code)
+        print("ERROR: Coinmarketcap.com code", res.status_code)
 
 def get_markets(currency):
     """ Get markets table """
     url = "https://coinmarketcap.com/currencies/{}/#markets".format(currency)
+    time.sleep(6)
     soup = get_html_soup(url)
     markets_table = soup.find("table", {"id": "markets-table"})
     tbody = markets_table.find("tbody")
