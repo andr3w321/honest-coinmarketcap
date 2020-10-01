@@ -6,6 +6,9 @@
 
 This script will scrape coinmarket.com and output a csv of the trading volume for USD pairs only. It excludes Bitfinex.com pairs because those are incorrectly listed as USD and are actually USDT.
 
+## Broken coinmarketcap API
+Coinmarketcap API is no longer working. Coingecko is possible alternative.
+
 ## Usage
 
 ### Output as CSV
